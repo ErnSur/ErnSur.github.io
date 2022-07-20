@@ -23,7 +23,7 @@ params:
         - post
     featuredImageField: image
     rssFullContent: true
-    favicon: img/quick-eye-logo.png
+    favicon: /img/quick-eye-logo.png
 
     footer:
         since: 2022
@@ -39,7 +39,7 @@ params:
         avatar:
             enabled: true
             local: false
-            src: img/racoon.jpeg
+            src: /img/racoon.jpeg
 
     article:
         math: false
