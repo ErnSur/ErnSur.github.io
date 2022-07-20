@@ -1,6 +1,5 @@
 ---
-title: "Is macOS good or is Windows so bad"
-date: 2022-07-16T20:47:30+02:00
+title: "OS UX"
 image: header.jpg
 draft: true
 ---

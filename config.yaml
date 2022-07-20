@@ -24,7 +24,7 @@ params:
         - post
     featuredImageField: image
     rssFullContent: true
-    favicon: quick-eye-logo.png
+    favicon: img/quick-eye-logo.png
 
     footer:
         since: 2020

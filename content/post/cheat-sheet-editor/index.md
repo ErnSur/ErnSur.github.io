@@ -5,7 +5,7 @@ image: header.png
 categories:
   - editor
   - unity
-draft: true
+draft: false
 ---
 
 ## Asset Management
@@ -26,8 +26,8 @@ draft: true
   - {{<doc EditorWindow>}} Create custom windows
   - {{<doc SettingsProvider>}} Create custom view in Preferences or ProjectSettings windows
   - {{<doc PropertyDrawer>}} Customize input field for your serializable c# type
-  - {{<doc EditorApplication.projectWindowItemOnGUI>}} Customize project window items
-  - {{<doc EditorApplication.hierarchyWindowItemOnGUI>}} Customize hierarchy window items
+  - {{<doc EditorApplication-projectWindowItemOnGUI>}} Customize project window items
+  - {{<doc EditorApplication-hierarchyWindowItemOnGUI>}} Customize hierarchy window items
 
 - Draw GUI
   - IMGUI

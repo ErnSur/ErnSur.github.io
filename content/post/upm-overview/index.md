@@ -1,7 +1,8 @@
 ---
 title: "Maintaining and Delivering a Unity Package 📦"
-date: 2022-07-16T21:39:28+02:00
-draft: true
+date: 2021-10-26
+image: header.png
+draft: false
 ---
 
 Whether you call it a library or a package, it’s a common practice to bundle a bunch of code into an entity that you might later reuse on many different projects. To distribute it, you usually use package managers like npm, pip, or NuGet.
@@ -16,11 +17,11 @@ Currently, the most common way to share your code and assets in the Unity commun
 
 If you are a code library maintainer and want your users to be happy, there are some common aspects you will want your package to have:
 
--   Easy to import
--   Easy to update
--   Easy to maintain
--   Easy to remove
--   Hard to break
+- Easy to import
+- Easy to update
+- Easy to maintain
+- Easy to remove
+- Hard to break
 
 ## Problems with asset packages
 
@@ -42,9 +43,9 @@ Starting with Unity 2018 we can use Unity Package Manager or UPM, a system that 
 
 Pros of UPM format package:
 
--   Easy to manage packages used in the project
--   Package metadata is easily accessible: version, author, source, samples, etc.
--   Dependency resolution
+- Easy to manage packages used in the project
+- Package metadata is easily accessible: version, author, source, samples, etc.
+- Dependency resolution
 
 There are already good resources on how to create a UPM package and even set up a CD for it.
 
@@ -62,13 +63,13 @@ Your users will be able to add and update your package using either a git URL or
 
 Pros:
 
--   Easy to setup
--   Easy to add, update and remove
+- Easy to setup
+- Easy to add, update and remove
 
 Cons:
 
--   Limited dependency resolution
--   Package needs to be public
+- Limited dependency resolution
+- Package needs to be public
 
 ## Scoped Registry
 
@@ -80,12 +81,12 @@ An example of such a registry is the [OpenUPM](https://openupm.com/) project.
 
 Pros:
 
--   Browse available packages inside Unity UI (with limitations)
--   Dependency resolution
+- Browse available packages inside Unity UI (with limitations)
+- Dependency resolution
 
 Cons:
 
--   More set up on the user and distributor side.
+- More set up on the user and distributor side.
 
 [Run your own Unity Package Server! | by Markus X. Hofer | Medium](https://medium.com/@markushofer/run-your-own-unity-package-server-b4fe9995704e)
 
@@ -95,19 +96,19 @@ The tarball is also an archive file, but when imported into Unity its content is
 
 **When imported into Unity:**
 
--   Tarball becomes a project asset, unlike Asset Package which is immediately extracted into a project while the package itself is not part of it.
--   Extracted files from tarball are kept outside of Assets or Packages directories. They are stored in the Library folder.
+- Tarball becomes a project asset, unlike Asset Package which is immediately extracted into a project while the package itself is not part of it.
+- Extracted files from tarball are kept outside of Assets or Packages directories. They are stored in the Library folder.
 
 Pros:
 
--   Immutable
--   Doesn’t depend on the server access
--   Relatively easy to add, update and remove
+- Immutable
+- Doesn’t depend on the server access
+- Relatively easy to add, update and remove
 
 Cons:
 
--   Unity 2018 has no UI for importing tarballs
--   Limited dependency resolution
+- Unity 2018 has no UI for importing tarballs
+- Limited dependency resolution
 
 ## Asset Package with UPM package
 
@@ -115,17 +116,16 @@ There is also a concept of an embedded UPM package. This is a package that is st
 
 ![](https://miro.medium.com/max/700/1*z-IaUBKVBnOM5mtGK7lfGg.png)
 
-Package exported from Packages folder with `[AssetDatabase.ExportPackage](https://docs.unity3d.com/ScriptReference/AssetDatabase.ExportPackage.html)`
-
+>Package exported from Packages folder with {{<doc AssetDatabase.ExportPackage>}}
 This solution sadly has only one small advantage which is the package being outside of the Assets folder.
 
 Pros:
 
--   Outside of Assets folder
+- Outside of Assets folder
 
 Cons:
 
--   All of the cons of Asset Package
+- All of the cons of Asset Package
 
 # Closed source package, private/internal use
 
@@ -141,14 +141,14 @@ This solution would be viable for companies where there are many internal packag
 
 Pros:
 
--   Browse available packages from Editor UI
--   Very easy to update packages
--   Dependency resolution
+- Browse available packages from Editor UI
+- Very easy to update packages
+- Dependency resolution
 
 Cons:
 
--   Available only for Unity Editor 2019.3.4f1+
--   Requires convoluted setup for registry and each user
+- Available only for Unity Editor 2019.3.4f1+
+- Requires convoluted setup for registry and each user
 
 ## Tarballs
 
@@ -156,19 +156,19 @@ If you want to share your package with selected users but don’t want them to a
 
 # My Solution ✔️
 
-I work at [Sayollo](https://www.sayollo.com/), where I develop a Unity SDK that enables developers to integrate eCommerce and add ads into the 3D space of their games. Because of it, I have some limitations in what I can do. For example, I need to distribute my package to authorized users only, so I need to narrow my options to closed-source ones.  
-I also can’t expect my users to go over an elaborate setup process on each system just to access my package, so I have to rule out the private repository and scoped registry options.  
-This leaves me with tarballs. Unfortunately, this option also has some big problems for my use case.
+I worked at a company, where I was developing a Unity SDK that enabled developers to integrate eCommerce and add ads into the 3D space of their games. Because of it, I had some limitations in what I could do. For example, I had to distribute my package to authorized users only, so it narrowed my options to closed-source ones.  
+I also couldn’t expect my users to go over an elaborate setup process on each system just to access my package, so I had to rule out the private repository and scoped registry options.  
+This leaved me with tarballs. Unfortunately, this option also had some big problems for my use case.
 
-My package has some dependencies, and one of them is also not distributed in UPM format. To allow my users to easily update this dependency by themselves using the asset store, I have to limit myself from modifying its content.  
-The following reasons force me to still depend on Assets Packages, but what can I do to work with its disadvantages? I use the following design rules to allow my users to easily remove, relocate, and update my package.
+My package had some dependencies, and one of them was also not distributed in UPM format. To allow my users to easily update this dependency by themselves using the asset store, I had to limit myself from modifying its content.  
+The following reasons forced me to still depend on Assets Packages, but what could I do to work with its disadvantages? I used the following design rules to allow my users to easily remove, relocate, and update my package.
 
 **Create a package that’s immutable by design**
 
--   Don’t require the user to modify package content.
--   Don’t modify package content in its lifetime.
--   Store package generated assets in a separate directory.
--   Don’t depend on absolute paths to your package.
+- Don’t require the user to modify package content.
+- Don’t modify package content in its lifetime.
+- Store package generated assets in a separate directory.
+- Don’t depend on absolute paths to your package.
 
 This way, when the user wants to update the old package folder, it can be deleted without worrying about lost content. They can also move the package folder if they don’t want to clutter their root directory.
 
@@ -176,8 +176,8 @@ This way, when the user wants to update the old package folder, it can be delete
 
 UPM package is certainly a step in the right direction, but still not an ideal solution.
 
--   Unity 2018's package manager is missing some features, which is important when you still have users using this version.
--   Distributing a single file package when it depends on other (non-official) UPM packages is impossible without adding a new scoped registry beforehand or third-party solutions.
--   [Unity guidelines](https://unity3d.com/legal/terms-of-service/software/package-guidelines) prevent you from utilizing the full power of the system, mainly that you cannot _add, update or modify installed Packages on behalf of the user outside the official Unity Editor UI, such as programmatically through scripts._
+- Unity 2018's package manager is missing some features, which is important when you still have users using this version.
+- Distributing a single file package when it depends on other (non-official) UPM packages is impossible without adding a new scoped registry beforehand or third-party solutions.
+- [Unity guidelines](https://unity3d.com/legal/terms-of-service/software/package-guidelines) prevent you from utilizing the full power of the system, mainly that you cannot _add, update or modify installed Packages on behalf of the user outside the official Unity Editor UI, such as programmatically through scripts._
 
 The last one hurts the most, obviously. The introduction of these guidelines forced Google to shut down their public registry where a user could easily manage their SDKs. But this system is still new in the Unity ecosystem and is improving from version to version, which gives us some hope for the future.

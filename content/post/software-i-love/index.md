@@ -1,6 +1,5 @@
 ---
 title: "Software I 💛"
-date: 2022-07-16T20:47:30+02:00
 image: header.png
 draft: true
 ---
