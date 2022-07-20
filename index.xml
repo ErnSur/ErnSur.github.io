@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ernest Suryś</title><link>https://ErnSur.github.io/</link><description>Recent content on Ernest Suryś</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 16 Jul 2022 20:47:30 +0200</lastBuildDate><atom:link href="https://ErnSur.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Unity Editor Scripting Cheat Sheet</title><link>https://ErnSur.github.io/p/unity-editor-scripting-cheat-sheet/</link><pubDate>Sat, 16 Jul 2022 20:47:30 +0200</pubDate><guid>https://ErnSur.github.io/p/unity-editor-scripting-cheat-sheet/</guid><description>&lt;img src="https://ErnSur.github.io/p/unity-editor-scripting-cheat-sheet/header.png" alt="Featured image of post Unity Editor Scripting Cheat Sheet" />&lt;h2 id="asset-management">Asset Management&lt;/h2>
+&lt;ul>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/AssetDatabase.html" target="_blank" rel="noopener">AssetDatabase&lt;/a>&lt;/code> CRUD of Unity Editor&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/AssetPostprocessor.html" target="_blank" rel="noopener">AssetPostprocessor&lt;/a>&lt;/code> &amp;amp; &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/AssetModificationProcessor.html" target="_blank" rel="noopener">AssetModificationProcessor&lt;/a>&lt;/code> Take action after asset import&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/PrefabUtility.html" target="_blank" rel="noopener">PrefabUtility&lt;/a>&lt;/code> Inspect / Modify Prefabs
+&lt;ul>
+&lt;li>Instantiate prefabs in the scene as &amp;ldquo;prefab instances&amp;rdquo; and not regular game objects&lt;/li>
+&lt;li>Create prefab variants&lt;/li>
+&lt;li>Add components&lt;/li>
+&lt;li>Apply overrides&lt;/li>
+&lt;li>Supports &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/Undo.html" target="_blank" rel="noopener">Undo&lt;/a>&lt;/code> out of the box&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="ui">UI&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>Entry points:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/MenuItem.html" target="_blank" rel="noopener">MenuItem&lt;/a>&lt;/code> Create context menu items&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/Editor.html" target="_blank" rel="noopener">Editor&lt;/a>&lt;/code> Create custom &amp;ldquo;Inspector view&amp;rdquo; for specific component (MonoBehaviour object)&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorWindow.html" target="_blank" rel="noopener">EditorWindow&lt;/a>&lt;/code> Create custom windows&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/SettingsProvider.html" target="_blank" rel="noopener">SettingsProvider&lt;/a>&lt;/code> Create custom view in Preferences or ProjectSettings windows&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/PropertyDrawer.html" target="_blank" rel="noopener">PropertyDrawer&lt;/a>&lt;/code> Customize input field for your serializable c# type&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorApplication-projectWindowItemOnGUI.html" target="_blank" rel="noopener">EditorApplication.projectWindowItemOnGUI&lt;/a>&lt;/code> Customize project window items&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorApplication-hierarchyWindowItemOnGUI.html" target="_blank" rel="noopener">EditorApplication.hierarchyWindowItemOnGUI&lt;/a>&lt;/code> Customize hierarchy window items&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Draw GUI&lt;/p>
+&lt;ul>
+&lt;li>IMGUI
+&lt;ul>
+&lt;li>Static classes: &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/GUI.html" target="_blank" rel="noopener">GUI&lt;/a>&lt;/code>, &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/GUILayout.html" target="_blank" rel="noopener">GUILayout&lt;/a>&lt;/code>, &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorGUI.html" target="_blank" rel="noopener">EditorGUI&lt;/a>&lt;/code>, &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorGUILayout.html" target="_blank" rel="noopener">EditorGUILayout&lt;/a>&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>UI Toolkit
+&lt;ul>
+&lt;li>Namespaces &lt;code>UnityEngine.UIElements&lt;/code> and &lt;code>UnityEditor.UIElements&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="scene-view">Scene View&lt;/h2>
+&lt;ul>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/Gizmos.html" target="_blank" rel="noopener">Gizmos&lt;/a>&lt;/code> Draw things like tool handles or bounding boxes&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/Overlays.Overlay.html" target="_blank" rel="noopener">Overlays.Overlay&lt;/a>&lt;/code> Panels like tool options or data&lt;/li>
+&lt;/ul>
+&lt;h2 id="serialization">Serialization&lt;/h2>
+&lt;ul>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/JsonUtility.html" target="_blank" rel="noopener">JsonUtility&lt;/a>&lt;/code>&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/SerializedObject.html" target="_blank" rel="noopener">SerializedObject&lt;/a>&lt;/code> &amp;amp; &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/SerializedProperty.html" target="_blank" rel="noopener">SerializedProperty&lt;/a>&lt;/code> When you want to modify component/asset avoid modifying it directly, instead use this API to properly save assets, scenes, support &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/Undo.html" target="_blank" rel="noopener">Undo&lt;/a>&lt;/code> etc.&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/Undo.html" target="_blank" rel="noopener">Undo&lt;/a>&lt;/code> When modifying scene objects or assets use this class to support undo feature.&lt;/li>
+&lt;/ul>
+&lt;h2 id="native-popups">Native Popups&lt;/h2>
+&lt;ul>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorUtility.DisplayDialog.html" target="_blank" rel="noopener">EditorUtility.DisplayDialog&lt;/a>&lt;/code> Get confirmation from user&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorUtility.DisplayPopupMenu.html" target="_blank" rel="noopener">EditorUtility.DisplayPopupMenu&lt;/a>&lt;/code> Open context menu&lt;/li>
+&lt;li>Make user select path
+&lt;ul>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorUtility.OpenFilePanel.html" target="_blank" rel="noopener">EditorUtility.OpenFilePanel&lt;/a>&lt;/code>&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorUtility.OpenFilePanelWithFilters.html" target="_blank" rel="noopener">EditorUtility.OpenFilePanelWithFilters&lt;/a>&lt;/code>&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorUtility.OpenFolderPanel.html" target="_blank" rel="noopener">EditorUtility.OpenFolderPanel&lt;/a>&lt;/code>&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorUtility.SaveFilePanel.html" target="_blank" rel="noopener">EditorUtility.SaveFilePanel&lt;/a>&lt;/code>&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorUtility.SaveFilePanelInProject.html" target="_blank" rel="noopener">EditorUtility.SaveFilePanelInProject&lt;/a>&lt;/code>&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorUtility.SaveFolderPanel.html" target="_blank" rel="noopener">EditorUtility.SaveFolderPanel&lt;/a>&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Progress bar
+&lt;ul>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorUtility.DisplayProgressBar.html" target="_blank" rel="noopener">EditorUtility.DisplayProgressBar&lt;/a>&lt;/code>&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorUtility.ClearProgressBar.html" target="_blank" rel="noopener">EditorUtility.ClearProgressBar&lt;/a>&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="advanced--tricks">Advanced / Tricks&lt;/h2>
+&lt;ul>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/IMGUI.Controls.TreeView.html" target="_blank" rel="noopener">IMGUI.Controls.TreeView&lt;/a>&lt;/code> IMGUI TreeView&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/IMGUI.Controls.AdvancedDropdown.html" target="_blank" rel="noopener">IMGUI.Controls.AdvancedDropdown&lt;/a>&lt;/code> Dropdown with pages as in &amp;ldquo;Add Component&amp;rdquo; button.&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorGUIUtility.IconContent.html" target="_blank" rel="noopener">EditorGUIUtility.IconContent&lt;/a>&lt;/code> Load icon texture from editor resources. More at &lt;a class="link" href="https://github.com/ErnSur/unity-editor-icons" target="_blank" rel="noopener"
+>Editor Icon Browser&lt;/a>&lt;/li>
+&lt;li>Open &lt;em>About Unity&lt;/em> menu and type &amp;ldquo;internal&amp;rdquo; to toggle editors developer mode.
+&lt;ul>
+&lt;li>Reload and inspect editor window from its tab context menu&lt;/li>
+&lt;li>Enable &amp;ldquo;Debug-Internal&amp;rdquo; inspector mode from tab context menu&lt;/li>
+&lt;li>Bunch of other internal tools, you can look for those in &lt;a class="link" href="https://github.com/Unity-Technologies/UnityCsReference" target="_blank" rel="noopener"
+>Unity C#Reference repo&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="resources">Resources&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://github.com/Unity-Technologies/UnityCsReference" target="_blank" rel="noopener"
+>Unity C#Reference repo&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/ernsur" title="https://github.com/ernsur"
+target="_blank" rel="noopener"
+>My GitHub projects&lt;/a> &amp;amp; &lt;a class="link" href="https://github.com/ErnSur?tab=stars" title="https://github.com/ErnSur?tab=stars"
+target="_blank" rel="noopener"
+>Stars&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://forum.unity.com/forums/ui-toolkit.178/" title="https://forum.unity.com/forums/ui-toolkit.178/"
+target="_blank" rel="noopener"
+>Unity Forums&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="examples">Examples&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cs" data-lang="cs">&lt;span class="line">&lt;span class="cl">&lt;span class="k">using&lt;/span> &lt;span class="nn">UnityEditor&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">using&lt;/span> &lt;span class="nn">UnityEditorInternal&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">using&lt;/span> &lt;span class="nn">UnityEngine&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">internal&lt;/span> &lt;span class="k">static&lt;/span> &lt;span class="k">class&lt;/span> &lt;span class="nc">ContextMenuItems&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">private&lt;/span> &lt;span class="k">const&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="n">RevertPrefabTransformMenuName&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s">&amp;#34;CONTEXT/RectTransform/Revert Prefab Transform&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na"> [MenuItem(&amp;#34;GameObject/Copy Transform #^C&amp;#34;)]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="k">static&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">CopyTransform&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">MenuCommand&lt;/span> &lt;span class="n">command&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">var&lt;/span> &lt;span class="n">obj&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">command&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">context&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">obj&lt;/span> &lt;span class="p">==&lt;/span> &lt;span class="k">null&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">obj&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">Selection&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">activeGameObject&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">obj&lt;/span> &lt;span class="k">is&lt;/span> &lt;span class="n">GameObject&lt;/span> &lt;span class="n">go&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">ComponentUtility&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">CopyComponent&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">go&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">transform&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">var&lt;/span> &lt;span class="n">sceneView&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">SceneView&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lastActiveSceneView&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">sceneView&lt;/span> &lt;span class="p">!=&lt;/span> &lt;span class="k">null&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sceneView&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">ShowNotification&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="n">GUIContent&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">$&amp;#34;Copied {go.name} Transform&amp;#34;&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na"> [MenuItem(&amp;#34;GameObject/Paste Transform #^V&amp;#34;)]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="k">static&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">PasteTransform&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">MenuCommand&lt;/span> &lt;span class="n">command&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">var&lt;/span> &lt;span class="n">obj&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">command&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">context&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">obj&lt;/span> &lt;span class="p">==&lt;/span> &lt;span class="k">null&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">obj&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">Selection&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">activeGameObject&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">obj&lt;/span> &lt;span class="k">is&lt;/span> &lt;span class="n">GameObject&lt;/span> &lt;span class="n">go&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">ComponentUtility&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">PasteComponentValues&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">go&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">transform&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">var&lt;/span> &lt;span class="n">sceneView&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">SceneView&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lastActiveSceneView&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">sceneView&lt;/span> &lt;span class="p">!=&lt;/span> &lt;span class="k">null&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sceneView&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">ShowNotification&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="n">GUIContent&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">$&amp;#34;Paste {go.name} Transform&amp;#34;&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na"> [MenuItem(RevertPrefabTransformMenuName)]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">private&lt;/span> &lt;span class="k">static&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">RevertPrefabTransform&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">MenuCommand&lt;/span> &lt;span class="n">command&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">var&lt;/span> &lt;span class="n">serObj&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">SerializedObject&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">command&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">context&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">var&lt;/span> &lt;span class="n">prop&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">serObj&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">GetIterator&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">prop&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">NextVisible&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">true&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">PrefabUtility&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">RevertPropertyOverride&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">prop&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">InteractionMode&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">UserAction&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na"> [MenuItem(RevertPrefabTransformMenuName, validate = true)]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">private&lt;/span> &lt;span class="k">static&lt;/span> &lt;span class="kt">bool&lt;/span> &lt;span class="n">RevertPrefabTransformValidate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">MenuCommand&lt;/span> &lt;span class="n">command&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">var&lt;/span> &lt;span class="n">obj&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">command&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">context&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">PrefabUtility&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">IsPartOfPrefabInstance&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">obj&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>Maintaining and Delivering a Unity Package 📦</title><link>https://ErnSur.github.io/p/maintaining-and-delivering-a-unity-package/</link><pubDate>Tue, 26 Oct 2021 00:00:00 +0000</pubDate><guid>https://ErnSur.github.io/p/maintaining-and-delivering-a-unity-package/</guid><description>&lt;img src="https://ErnSur.github.io/p/maintaining-and-delivering-a-unity-package/header.png" alt="Featured image of post Maintaining and Delivering a Unity Package 📦" />&lt;p>Whether you call it a library or a package, it’s a common practice to bundle a bunch of code into an entity that you might later reuse on many different projects. To distribute it, you usually use package managers like npm, pip, or NuGet.&lt;/p>
+&lt;h2 id="what-about-unity">What about Unity?&lt;/h2>
+&lt;p>Even though NuGet manages C# code, Unity was not designed to be compatible with it. NuGet also delivers DLLs, which also limit development capabilities in the Unity environment. This is because Unity Editor and its libraries API evolves fast, and without conditional compilation, it becomes harder to code against many different versions of the editor and its modules. Another difference between the regular .NET package and Unity is that the Unity package may depend on assets other than the code.&lt;/p>
+&lt;h1 id="current-packaging-solution">Current packaging solution&lt;/h1>
+&lt;p>Currently, the most common way to share your code and assets in the Unity community is with Unity’s archive format “.unitypackage”. For the sake of simplicity, I will call .unitypackage files “asset packages”, same as in the &lt;a class="link" href="https://docs.unity3d.com/Manual/AssetPackages.html" target="_blank" rel="noopener"
+>Unity manual&lt;/a>.&lt;/p>
+&lt;p>If you are a code library maintainer and want your users to be happy, there are some common aspects you will want your package to have:&lt;/p>
+&lt;ul>
+&lt;li>Easy to import&lt;/li>
+&lt;li>Easy to update&lt;/li>
+&lt;li>Easy to maintain&lt;/li>
+&lt;li>Easy to remove&lt;/li>
+&lt;li>Hard to break&lt;/li>
+&lt;/ul>
+&lt;h2 id="problems-with-asset-packages">Problems with asset packages&lt;/h2>
+&lt;p>The asset package itself is simply an archive, and is not connected to any package management system. Importing it just adds new files and overrides old ones. That’s why delivering library updates with asset packages presents certain problems:&lt;/p>
+&lt;h2 id="hard-to-update-">Hard to update ❌&lt;/h2>
+&lt;p>Let’s say that you created a new asset package version. Some of the changes include removed or relocated files. The user is now importing this new package but already has an older version of it in the project. Files that were previously removed will now be present again. This is especially important if you are working with special folders in Unity like Resources or Editor: if you want to move existing assets in or out of them, you’re out of luck. You will either have to ask the user to delete the old package by him/herself or you will need to write some code to delete those files automatically — which is not an easy task, considering its mutable state.&lt;/p>
+&lt;h2 id="hard-to-remove-and-easy-to-break-">Hard to remove and Easy to break ❌&lt;/h2>
+&lt;ul>
+&lt;li>Unity Projects consist of many different folders, but when you open up Unity Editor you can only see two of them inside the Project Window: Assets and Packages.&lt;/li>
+&lt;li>The assets folder is the main working directory and there is no common standard on how developers and artists organize it. They will create, delete and move files constantly.&lt;/li>
+&lt;li>Most of the Asset Packages import files into this directory. Some Assets Packages can import more than one folder into this root directory, scattering the library files across many different folders. Import many different SDKs, and you will soon find that those changes to the project are hard to track.&lt;/li>
+&lt;/ul>
+&lt;h2 id="better-alternative">Better alternative&lt;/h2>
+&lt;p>Starting with Unity 2018 we can use Unity Package Manager or UPM, a system that can download, install, and update packages that are treated as immutable dependencies of your project.&lt;/p>
+&lt;p>Pros of UPM format package:&lt;/p>
+&lt;ul>
+&lt;li>Easy to manage packages used in the project&lt;/li>
+&lt;li>Package metadata is easily accessible: version, author, source, samples, etc.&lt;/li>
+&lt;li>Dependency resolution&lt;/li>
+&lt;/ul>
+&lt;p>There are already good resources on how to create a UPM package and even set up a CD for it.&lt;/p>
+&lt;p>&lt;a class="link" href="https://medium.com/runic-software/simple-guide-to-unity-package-management-4aea43d1baf7" target="_blank" rel="noopener"
+>Simple Guide to Unity Package Management | by Paul Harwood | Runic Software | Medium&lt;/a>&lt;/p>
+&lt;p>Let’s focus on your distribution options based on our use case:&lt;/p>
+&lt;h1 id="open-source-package-available-for-everyone">Open source package, available for everyone:&lt;/h1>
+&lt;h2 id="git-repository">Git repository&lt;/h2>
+&lt;p>This is the simplest one, you just need to create a public repository where you’ll be developing the package. Additionally, you can add your package to &lt;a class="link" href="https://openupm.com/" target="_blank" rel="noopener"
+>OpenUPM.com&lt;/a>, an Open Source Unity Package Registry.&lt;/p>
+&lt;p>Your users will be able to add and update your package using either a git URL or OpenUPM CLI tool.&lt;/p>
+&lt;p>Pros:&lt;/p>
+&lt;ul>
+&lt;li>Easy to setup&lt;/li>
+&lt;li>Easy to add, update and remove&lt;/li>
+&lt;/ul>
+&lt;p>Cons:&lt;/p>
+&lt;ul>
+&lt;li>Limited dependency resolution&lt;/li>
+&lt;li>Package needs to be public&lt;/li>
+&lt;/ul>
+&lt;h2 id="scoped-registry">Scoped Registry&lt;/h2>
+&lt;blockquote>
+&lt;p>&lt;em>Scoped Registries allow Unity to communicate the location of any custom package registry server to the Package Manager so that the user has access to several collections of packages at the same time.&lt;/em>&lt;/p>
+&lt;/blockquote>
+&lt;p>You can set up a server or use an existing one to publish your packages to. Later users may add this server as a scoped registry to their Unity Project. This allows the user to browse, install, and update every package hosted on the server with dependency resolution, as long as the dependencies are in the scope of user registries.&lt;/p>
+&lt;p>An example of such a registry is the &lt;a class="link" href="https://openupm.com/" target="_blank" rel="noopener"
+>OpenUPM&lt;/a> project.&lt;/p>
+&lt;p>Pros:&lt;/p>
+&lt;ul>
+&lt;li>Browse available packages inside Unity UI (with limitations)&lt;/li>
+&lt;li>Dependency resolution&lt;/li>
+&lt;/ul>
+&lt;p>Cons:&lt;/p>
+&lt;ul>
+&lt;li>More set up on the user and distributor side.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a class="link" href="https://medium.com/@markushofer/run-your-own-unity-package-server-b4fe9995704e" target="_blank" rel="noopener"
+>Run your own Unity Package Server! | by Markus X. Hofer | Medium&lt;/a>&lt;/p>
+&lt;h2 id="tarballs">Tarballs&lt;/h2>
+&lt;p>The tarball is also an archive file, but when imported into Unity its content is treated as immutable.&lt;/p>
+&lt;p>&lt;strong>When imported into Unity:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Tarball becomes a project asset, unlike Asset Package which is immediately extracted into a project while the package itself is not part of it.&lt;/li>
+&lt;li>Extracted files from tarball are kept outside of Assets or Packages directories. They are stored in the Library folder.&lt;/li>
+&lt;/ul>
+&lt;p>Pros:&lt;/p>
+&lt;ul>
+&lt;li>Immutable&lt;/li>
+&lt;li>Doesn’t depend on the server access&lt;/li>
+&lt;li>Relatively easy to add, update and remove&lt;/li>
+&lt;/ul>
+&lt;p>Cons:&lt;/p>
+&lt;ul>
+&lt;li>Unity 2018 has no UI for importing tarballs&lt;/li>
+&lt;li>Limited dependency resolution&lt;/li>
+&lt;/ul>
+&lt;h2 id="asset-package-with-upm-package">Asset Package with UPM package&lt;/h2>
+&lt;p>There is also a concept of an embedded UPM package. This is a package that is stored locally in the “Packages” directory. This is the case, for example, when you are developing a UPM package. What you could do is simply export the package directory as an asset package and share it this way.&lt;/p>
+&lt;p>&lt;img src="https://miro.medium.com/max/700/1*z-IaUBKVBnOM5mtGK7lfGg.png"
+loading="lazy"
+>&lt;/p>
+&lt;blockquote>
+&lt;p>Package exported from Packages folder with &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/AssetDatabase.ExportPackage.html" target="_blank" rel="noopener">AssetDatabase.ExportPackage&lt;/a>&lt;/code>
+This solution sadly has only one small advantage which is the package being outside of the Assets folder.&lt;/p>
+&lt;/blockquote>
+&lt;p>Pros:&lt;/p>
+&lt;ul>
+&lt;li>Outside of Assets folder&lt;/li>
+&lt;/ul>
+&lt;p>Cons:&lt;/p>
+&lt;ul>
+&lt;li>All of the cons of Asset Package&lt;/li>
+&lt;/ul>
+&lt;h1 id="closed-source-package-privateinternal-use">Closed source package, private/internal use&lt;/h1>
+&lt;p>If you work in a company and share your internal libraries with your co-workers more setup is needed.&lt;/p>
+&lt;h2 id="simplest-option-private-repositories">Simplest option: private repositories&lt;/h2>
+&lt;p>You can host your package in a private repository and add it to the project with a git URL. The limitation of this solution is that UPM won’t ask you for credentials to authenticate your access. The simplest solution, in this case, is to use SSH URLs. The &lt;a class="link" href="https://docs.unity3d.com/Manual/upm-errors.html#prompts-disabled" target="_blank" rel="noopener"
+>Unity manual&lt;/a> has more info regarding this problem.&lt;/p>
+&lt;h2 id="private-scoped-registry">Private Scoped Registry&lt;/h2>
+&lt;p>This solution would be viable for companies where there are many internal packages and an administrator that can manage this setup. Unfortunately for now (2021), this solution is more of an MVP feature.&lt;/p>
+&lt;p>Pros:&lt;/p>
+&lt;ul>
+&lt;li>Browse available packages from Editor UI&lt;/li>
+&lt;li>Very easy to update packages&lt;/li>
+&lt;li>Dependency resolution&lt;/li>
+&lt;/ul>
+&lt;p>Cons:&lt;/p>
+&lt;ul>
+&lt;li>Available only for Unity Editor 2019.3.4f1+&lt;/li>
+&lt;li>Requires convoluted setup for registry and each user&lt;/li>
+&lt;/ul>
+&lt;h2 id="tarballs-1">Tarballs&lt;/h2>
+&lt;p>If you want to share your package with selected users but don’t want them to access your repository and set up the ssh key you can use tarballs.&lt;/p>
+&lt;h1 id="my-solution-">My Solution ✔️&lt;/h1>
+&lt;p>I worked at a company, where I was developing a Unity SDK that enabled developers to integrate eCommerce and add ads into the 3D space of their games. Because of it, I had some limitations in what I could do. For example, I had to distribute my package to authorized users only, so it narrowed my options to closed-source ones.&lt;br>
+I also couldn’t expect my users to go over an elaborate setup process on each system just to access my package, so I had to rule out the private repository and scoped registry options.&lt;br>
+This leaved me with tarballs. Unfortunately, this option also had some big problems for my use case.&lt;/p>
+&lt;p>My package had some dependencies, and one of them was also not distributed in UPM format. To allow my users to easily update this dependency by themselves using the asset store, I had to limit myself from modifying its content.&lt;br>
+The following reasons forced me to still depend on Assets Packages, but what could I do to work with its disadvantages? I used the following design rules to allow my users to easily remove, relocate, and update my package.&lt;/p>
+&lt;p>&lt;strong>Create a package that’s immutable by design&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Don’t require the user to modify package content.&lt;/li>
+&lt;li>Don’t modify package content in its lifetime.&lt;/li>
+&lt;li>Store package generated assets in a separate directory.&lt;/li>
+&lt;li>Don’t depend on absolute paths to your package.&lt;/li>
+&lt;/ul>
+&lt;p>This way, when the user wants to update the old package folder, it can be deleted without worrying about lost content. They can also move the package folder if they don’t want to clutter their root directory.&lt;/p>
+&lt;h2 id="upm-summary">UPM Summary&lt;/h2>
+&lt;p>UPM package is certainly a step in the right direction, but still not an ideal solution.&lt;/p>
+&lt;ul>
+&lt;li>Unity 2018&amp;rsquo;s package manager is missing some features, which is important when you still have users using this version.&lt;/li>
+&lt;li>Distributing a single file package when it depends on other (non-official) UPM packages is impossible without adding a new scoped registry beforehand or third-party solutions.&lt;/li>
+&lt;li>&lt;a class="link" href="https://unity3d.com/legal/terms-of-service/software/package-guidelines" target="_blank" rel="noopener"
+>Unity guidelines&lt;/a> prevent you from utilizing the full power of the system, mainly that you cannot &lt;em>add, update or modify installed Packages on behalf of the user outside the official Unity Editor UI, such as programmatically through scripts.&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;p>The last one hurts the most, obviously. The introduction of these guidelines forced Google to shut down their public registry where a user could easily manage their SDKs. But this system is still new in the Unity ecosystem and is improving from version to version, which gives us some hope for the future.&lt;/p></description></item><item><title>Archives</title><link>https://ErnSur.github.io/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://ErnSur.github.io/archives/</guid><description/></item><item><title>Search</title><link>https://ErnSur.github.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ErnSur.github.io/search/</guid><description/></item></channel></rss>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Unity on Ernest Suryś</title><link>https://ErnSur.github.io/categories/unity/</link><description>Recent content in Unity on Ernest Suryś</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 16 Jul 2022 20:47:30 +0200</lastBuildDate><atom:link href="https://ErnSur.github.io/categories/unity/index.xml" rel="self" type="application/rss+xml"/><item><title>Unity Editor Scripting Cheat Sheet</title><link>https://ErnSur.github.io/p/unity-editor-scripting-cheat-sheet/</link><pubDate>Sat, 16 Jul 2022 20:47:30 +0200</pubDate><guid>https://ErnSur.github.io/p/unity-editor-scripting-cheat-sheet/</guid><description>&lt;img src="https://ErnSur.github.io/p/unity-editor-scripting-cheat-sheet/header.png" alt="Featured image of post Unity Editor Scripting Cheat Sheet" />&lt;h2 id="asset-management">Asset Management&lt;/h2>
+&lt;ul>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/AssetDatabase.html" target="_blank" rel="noopener">AssetDatabase&lt;/a>&lt;/code> CRUD of Unity Editor&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/AssetPostprocessor.html" target="_blank" rel="noopener">AssetPostprocessor&lt;/a>&lt;/code> &amp;amp; &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/AssetModificationProcessor.html" target="_blank" rel="noopener">AssetModificationProcessor&lt;/a>&lt;/code> Take action after asset import&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/PrefabUtility.html" target="_blank" rel="noopener">PrefabUtility&lt;/a>&lt;/code> Inspect / Modify Prefabs
+&lt;ul>
+&lt;li>Instantiate prefabs in the scene as &amp;ldquo;prefab instances&amp;rdquo; and not regular game objects&lt;/li>
+&lt;li>Create prefab variants&lt;/li>
+&lt;li>Add components&lt;/li>
+&lt;li>Apply overrides&lt;/li>
+&lt;li>Supports &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/Undo.html" target="_blank" rel="noopener">Undo&lt;/a>&lt;/code> out of the box&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="ui">UI&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>Entry points:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/MenuItem.html" target="_blank" rel="noopener">MenuItem&lt;/a>&lt;/code> Create context menu items&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/Editor.html" target="_blank" rel="noopener">Editor&lt;/a>&lt;/code> Create custom &amp;ldquo;Inspector view&amp;rdquo; for specific component (MonoBehaviour object)&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorWindow.html" target="_blank" rel="noopener">EditorWindow&lt;/a>&lt;/code> Create custom windows&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/SettingsProvider.html" target="_blank" rel="noopener">SettingsProvider&lt;/a>&lt;/code> Create custom view in Preferences or ProjectSettings windows&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/PropertyDrawer.html" target="_blank" rel="noopener">PropertyDrawer&lt;/a>&lt;/code> Customize input field for your serializable c# type&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorApplication-projectWindowItemOnGUI.html" target="_blank" rel="noopener">EditorApplication.projectWindowItemOnGUI&lt;/a>&lt;/code> Customize project window items&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorApplication-hierarchyWindowItemOnGUI.html" target="_blank" rel="noopener">EditorApplication.hierarchyWindowItemOnGUI&lt;/a>&lt;/code> Customize hierarchy window items&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Draw GUI&lt;/p>
+&lt;ul>
+&lt;li>IMGUI
+&lt;ul>
+&lt;li>Static classes: &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/GUI.html" target="_blank" rel="noopener">GUI&lt;/a>&lt;/code>, &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/GUILayout.html" target="_blank" rel="noopener">GUILayout&lt;/a>&lt;/code>, &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorGUI.html" target="_blank" rel="noopener">EditorGUI&lt;/a>&lt;/code>, &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorGUILayout.html" target="_blank" rel="noopener">EditorGUILayout&lt;/a>&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>UI Toolkit
+&lt;ul>
+&lt;li>Namespaces &lt;code>UnityEngine.UIElements&lt;/code> and &lt;code>UnityEditor.UIElements&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="scene-view">Scene View&lt;/h2>
+&lt;ul>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/Gizmos.html" target="_blank" rel="noopener">Gizmos&lt;/a>&lt;/code> Draw things like tool handles or bounding boxes&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/Overlays.Overlay.html" target="_blank" rel="noopener">Overlays.Overlay&lt;/a>&lt;/code> Panels like tool options or data&lt;/li>
+&lt;/ul>
+&lt;h2 id="serialization">Serialization&lt;/h2>
+&lt;ul>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/JsonUtility.html" target="_blank" rel="noopener">JsonUtility&lt;/a>&lt;/code>&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/SerializedObject.html" target="_blank" rel="noopener">SerializedObject&lt;/a>&lt;/code> &amp;amp; &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/SerializedProperty.html" target="_blank" rel="noopener">SerializedProperty&lt;/a>&lt;/code> When you want to modify component/asset avoid modifying it directly, instead use this API to properly save assets, scenes, support &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/Undo.html" target="_blank" rel="noopener">Undo&lt;/a>&lt;/code> etc.&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/Undo.html" target="_blank" rel="noopener">Undo&lt;/a>&lt;/code> When modifying scene objects or assets use this class to support undo feature.&lt;/li>
+&lt;/ul>
+&lt;h2 id="native-popups">Native Popups&lt;/h2>
+&lt;ul>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorUtility.DisplayDialog.html" target="_blank" rel="noopener">EditorUtility.DisplayDialog&lt;/a>&lt;/code> Get confirmation from user&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorUtility.DisplayPopupMenu.html" target="_blank" rel="noopener">EditorUtility.DisplayPopupMenu&lt;/a>&lt;/code> Open context menu&lt;/li>
+&lt;li>Make user select path
+&lt;ul>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorUtility.OpenFilePanel.html" target="_blank" rel="noopener">EditorUtility.OpenFilePanel&lt;/a>&lt;/code>&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorUtility.OpenFilePanelWithFilters.html" target="_blank" rel="noopener">EditorUtility.OpenFilePanelWithFilters&lt;/a>&lt;/code>&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorUtility.OpenFolderPanel.html" target="_blank" rel="noopener">EditorUtility.OpenFolderPanel&lt;/a>&lt;/code>&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorUtility.SaveFilePanel.html" target="_blank" rel="noopener">EditorUtility.SaveFilePanel&lt;/a>&lt;/code>&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorUtility.SaveFilePanelInProject.html" target="_blank" rel="noopener">EditorUtility.SaveFilePanelInProject&lt;/a>&lt;/code>&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorUtility.SaveFolderPanel.html" target="_blank" rel="noopener">EditorUtility.SaveFolderPanel&lt;/a>&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Progress bar
+&lt;ul>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorUtility.DisplayProgressBar.html" target="_blank" rel="noopener">EditorUtility.DisplayProgressBar&lt;/a>&lt;/code>&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorUtility.ClearProgressBar.html" target="_blank" rel="noopener">EditorUtility.ClearProgressBar&lt;/a>&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="advanced--tricks">Advanced / Tricks&lt;/h2>
+&lt;ul>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/IMGUI.Controls.TreeView.html" target="_blank" rel="noopener">IMGUI.Controls.TreeView&lt;/a>&lt;/code> IMGUI TreeView&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/IMGUI.Controls.AdvancedDropdown.html" target="_blank" rel="noopener">IMGUI.Controls.AdvancedDropdown&lt;/a>&lt;/code> Dropdown with pages as in &amp;ldquo;Add Component&amp;rdquo; button.&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorGUIUtility.IconContent.html" target="_blank" rel="noopener">EditorGUIUtility.IconContent&lt;/a>&lt;/code> Load icon texture from editor resources. More at &lt;a class="link" href="https://github.com/ErnSur/unity-editor-icons" target="_blank" rel="noopener"
+>Editor Icon Browser&lt;/a>&lt;/li>
+&lt;li>Open &lt;em>About Unity&lt;/em> menu and type &amp;ldquo;internal&amp;rdquo; to toggle editors developer mode.
+&lt;ul>
+&lt;li>Reload and inspect editor window from its tab context menu&lt;/li>
+&lt;li>Enable &amp;ldquo;Debug-Internal&amp;rdquo; inspector mode from tab context menu&lt;/li>
+&lt;li>Bunch of other internal tools, you can look for those in &lt;a class="link" href="https://github.com/Unity-Technologies/UnityCsReference" target="_blank" rel="noopener"
+>Unity C#Reference repo&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="resources">Resources&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://github.com/Unity-Technologies/UnityCsReference" target="_blank" rel="noopener"
+>Unity C#Reference repo&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/ernsur" title="https://github.com/ernsur"
+target="_blank" rel="noopener"
+>My GitHub projects&lt;/a> &amp;amp; &lt;a class="link" href="https://github.com/ErnSur?tab=stars" title="https://github.com/ErnSur?tab=stars"
+target="_blank" rel="noopener"
+>Stars&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://forum.unity.com/forums/ui-toolkit.178/" title="https://forum.unity.com/forums/ui-toolkit.178/"
+target="_blank" rel="noopener"
+>Unity Forums&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="examples">Examples&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cs" data-lang="cs">&lt;span class="line">&lt;span class="cl">&lt;span class="k">using&lt;/span> &lt;span class="nn">UnityEditor&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">using&lt;/span> &lt;span class="nn">UnityEditorInternal&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">using&lt;/span> &lt;span class="nn">UnityEngine&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">internal&lt;/span> &lt;span class="k">static&lt;/span> &lt;span class="k">class&lt;/span> &lt;span class="nc">ContextMenuItems&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">private&lt;/span> &lt;span class="k">const&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="n">RevertPrefabTransformMenuName&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s">&amp;#34;CONTEXT/RectTransform/Revert Prefab Transform&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na"> [MenuItem(&amp;#34;GameObject/Copy Transform #^C&amp;#34;)]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="k">static&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">CopyTransform&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">MenuCommand&lt;/span> &lt;span class="n">command&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">var&lt;/span> &lt;span class="n">obj&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">command&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">context&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">obj&lt;/span> &lt;span class="p">==&lt;/span> &lt;span class="k">null&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">obj&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">Selection&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">activeGameObject&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">obj&lt;/span> &lt;span class="k">is&lt;/span> &lt;span class="n">GameObject&lt;/span> &lt;span class="n">go&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">ComponentUtility&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">CopyComponent&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">go&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">transform&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">var&lt;/span> &lt;span class="n">sceneView&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">SceneView&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lastActiveSceneView&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">sceneView&lt;/span> &lt;span class="p">!=&lt;/span> &lt;span class="k">null&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sceneView&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">ShowNotification&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="n">GUIContent&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">$&amp;#34;Copied {go.name} Transform&amp;#34;&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na"> [MenuItem(&amp;#34;GameObject/Paste Transform #^V&amp;#34;)]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="k">static&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">PasteTransform&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">MenuCommand&lt;/span> &lt;span class="n">command&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">var&lt;/span> &lt;span class="n">obj&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">command&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">context&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">obj&lt;/span> &lt;span class="p">==&lt;/span> &lt;span class="k">null&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">obj&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">Selection&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">activeGameObject&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">obj&lt;/span> &lt;span class="k">is&lt;/span> &lt;span class="n">GameObject&lt;/span> &lt;span class="n">go&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">ComponentUtility&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">PasteComponentValues&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">go&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">transform&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">var&lt;/span> &lt;span class="n">sceneView&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">SceneView&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lastActiveSceneView&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">sceneView&lt;/span> &lt;span class="p">!=&lt;/span> &lt;span class="k">null&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sceneView&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">ShowNotification&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="n">GUIContent&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">$&amp;#34;Paste {go.name} Transform&amp;#34;&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na"> [MenuItem(RevertPrefabTransformMenuName)]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">private&lt;/span> &lt;span class="k">static&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">RevertPrefabTransform&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">MenuCommand&lt;/span> &lt;span class="n">command&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">var&lt;/span> &lt;span class="n">serObj&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">SerializedObject&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">command&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">context&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">var&lt;/span> &lt;span class="n">prop&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">serObj&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">GetIterator&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">prop&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">NextVisible&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">true&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">PrefabUtility&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">RevertPropertyOverride&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">prop&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">InteractionMode&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">UserAction&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na"> [MenuItem(RevertPrefabTransformMenuName, validate = true)]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">private&lt;/span> &lt;span class="k">static&lt;/span> &lt;span class="kt">bool&lt;/span> &lt;span class="n">RevertPrefabTransformValidate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">MenuCommand&lt;/span> &lt;span class="n">command&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">var&lt;/span> &lt;span class="n">obj&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">command&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">context&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">PrefabUtility&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">IsPartOfPrefabInstance&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">obj&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>
