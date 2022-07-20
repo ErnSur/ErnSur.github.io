@@ -41,9 +41,6 @@ Hugo ships with several [Built-in Shortcodes](https://gohugo.io/content-manageme
 
 {{< gist spf13 7896402 >}}
 
-## Gitlab Snippets Shortcode
-
-{{< gitlab 2349278 >}}
 
 ## Quote Shortcode
 

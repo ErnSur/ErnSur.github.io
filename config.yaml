@@ -1,6 +1,6 @@
 baseurl: https://example.com
 languageCode: en-us
-theme: stack
+# theme: hugo-theme-stack
 paginate: 5
 title: "Ernest Suryś"
 
@@ -39,7 +39,7 @@ params:
         subtitle: My Vault
         avatar:
             enabled: true
-            local: true
+            local: false
             src: img/racoon.jpeg
 
     article:
@@ -130,15 +130,15 @@ params:
     widgets:
         homepage:
             - type: search
-            - type: archives
-              params:
-                  limit: 5
             - type: categories
               params:
                   limit: 10
             - type: tag-cloud
               params:
                   limit: 10
+            - type: archives
+              params:
+                  limit: 5
         page:
             - type: toc
 
@@ -215,3 +215,10 @@ markup:
         lineNos: true
         lineNumbersInTable: true
         tabWidth: 4
+
+module:
+  # uncomment line below for temporary local development of module
+  # replacements: "github.com/CaiJimmy/hugo-theme-stack/v3 -> ../../hugo-theme-stack"
+  imports:
+    - path: github.com/CaiJimmy/hugo-theme-stack/v3
+      disable: false
