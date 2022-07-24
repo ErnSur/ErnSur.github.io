@@ -1,6 +1,6 @@
 ---
 title: "OS UX"
-image: header.jpg
+image: header.png
 draft: true
 ---
 
@@ -19,3 +19,8 @@ draft: true
 
 ### Irks
 - no middle mouse button for trackpad out of the box
+
+# Other Takes
+
+- Ross Scotts "[The GUI should be better](https://www.youtube.com/watch?v=AItTqnTsVjA)"
+- [TempleOS](https://www.youtube.com/watch?v=UCgoxQCf5Jg)

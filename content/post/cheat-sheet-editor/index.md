@@ -35,6 +35,11 @@ draft: false
   - UI Toolkit        
     - Namespaces `UnityEngine.UIElements` and `UnityEditor.UIElements`
 
+- Misc
+  - {{doc EditorApplication}}
+    - delayCall
+  - EditorCoroutines
+
 ## Scene View
 
 - {{<doc Gizmos>}} Draw things like tool handles or bounding boxes
