@@ -23,6 +23,7 @@ draft: true
 - [ColorSlurp](https://colorslurp.com/) (macOS)
 - [1Password](https://1password.com/)
 - [licecap (macOS)](https://www.cockos.com/licecap/)/[ScreenToGif (windows)](https://www.screentogif.com/)
+- [GitHub CLI](https://cli.github.com/)
 ## Technologies
 - brew/chocolatey
 - Markdown
