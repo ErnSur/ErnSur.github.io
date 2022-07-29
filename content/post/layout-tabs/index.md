@@ -20,3 +20,6 @@ BUT
 in 2021 Unity disabled the option to set min size of docked editor widnwos
 
 so I thought to add those tabs to main toolbar
+
+
+it seemd to work without that much hussle in spite of using reflection. Or so I thought.
