@@ -24,6 +24,9 @@ draft: true
 - [1Password](https://1password.com/)
 - [licecap (macOS)](https://www.cockos.com/licecap/)/[ScreenToGif (windows)](https://www.screentogif.com/)
 - [GitHub CLI](https://cli.github.com/)
+- [Folx - torrent client (macOS)](https://mac.eltima.com/torrent-client.html)
+- [Magic Prefs - Middle mouse click on touchpad (macOS)]()
+
 ## Technologies
 - brew/chocolatey
 - Markdown
