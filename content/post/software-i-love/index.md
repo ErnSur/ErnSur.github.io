@@ -30,3 +30,7 @@ draft: true
 - Powershell
 - GitHub Actions
 - Unity
+
+## Fonts
+- Fira Code
+- Cascadia Code
