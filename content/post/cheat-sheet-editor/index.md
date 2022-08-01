@@ -81,6 +81,7 @@ draft: false
 - [Unity C#Reference repo](https://github.com/Unity-Technologies/UnityCsReference)
 - [My GitHub projects](https://github.com/ernsur "https://github.com/ernsur") & [Stars](https://github.com/ErnSur?tab=stars "https://github.com/ErnSur?tab=stars")
 - [Unity Forums](https://forum.unity.com/forums/ui-toolkit.178/ "https://forum.unity.com/forums/ui-toolkit.178/")
+- You can create assembly with name like "Unity.InternalAPIEditorBridge.<index>" that has access to editor internal API. To find possible indexes search [editor source code](https://github.com/Unity-Technologies/UnityCsReference/blob/master/Editor/Mono/AssemblyInfo/AssemblyInfo.cs)
 
 ## Examples
 
