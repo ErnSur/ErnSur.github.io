@@ -56,3 +56,8 @@ I often feel like I have to defend myself when it comes up that I prefer to use 
 
 # Resources
 - [macOS tweeks](https://www.youtube.com/watch?v=psPgSN1bPLY)
+
+# Multitasking idea
+desktop windows being on infinite graph, just like GMS2 window workflow
+- https://www.reddit.com/r/techsupport/comments/udy5hr/scrollable_desktop_does_it_exist/
+- https://gimespace.com/gms3d.html
