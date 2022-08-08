@@ -12,6 +12,8 @@ I often feel like I have to defend myself when it comes up that I prefer to use 
 
 ### Hate
 - loves to waste space
+    - windows 11 start menu, recomended section
+    - file explorer
 - File Explorer
     - no tabs
     - so big
