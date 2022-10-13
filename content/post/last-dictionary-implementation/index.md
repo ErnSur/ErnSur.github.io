@@ -23,4 +23,3 @@ Property drawe:
 - inline key and value if both of them are one line property drawers.
     - create a foldout if there are not
 - IDictionary, API shoult not differ form regulat System.Generics.Collections impelemntation
-

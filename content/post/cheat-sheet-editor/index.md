@@ -35,11 +35,6 @@ draft: false
   - UI Toolkit        
     - Namespaces `UnityEngine.UIElements` and `UnityEditor.UIElements`
 
-- Misc
-  - {{doc EditorApplication}}
-    - delayCall
-  - EditorCoroutines
-
 ## Scene View
 
 - {{<doc Gizmos>}} Draw things like tool handles or bounding boxes
@@ -65,12 +60,21 @@ draft: false
 - Progress bar
   - {{<doc EditorUtility.DisplayProgressBar>}}
   - {{<doc EditorUtility.ClearProgressBar>}}
+- {{<doc EditorGUIUtility.GetMainWindowPosition>}} Gets editor window rect
 
+## Icons
+- {{<doc EditorGUIUtility.IconContent>}} Load icon texture from editor resources. More at [Editor Icon Browser](https://github.com/ErnSur/unity-editor-icons)
+- {{<doc EditorGUIUtility.SetIconForObject>}} Set icon texture for GameObject or MonoScript.
+- {{<doc EditorGUIUtility.SetIconSize>}} Change size of the icon.
+
+## Misc
+- {{<doc EditorGUIUtility.hierarchyMode>}} Reason why `Foldout` can behave differently in inspector view. [Unity Answers](https://answers.unity.com/questions/1320999/editorguifoldout-docs-wrong.html)
+- `EditorInternalUtility.IsValidFileName`
+- `ScriptableSingleton<T>`
 ## Advanced / Tricks
 
 - {{<doc IMGUI.Controls.TreeView>}} IMGUI TreeView
 - {{<doc IMGUI.Controls.AdvancedDropdown>}} Dropdown with pages as in "Add Component" button.
-- {{<doc EditorGUIUtility.IconContent>}} Load icon texture from editor resources. More at [Editor Icon Browser](https://github.com/ErnSur/unity-editor-icons)
 - Open _About Unity_ menu and type "internal" to toggle editors developer mode.
   - Reload and inspect editor window from its tab context menu
   - Enable "Debug-Internal" inspector mode from tab context menu
@@ -143,3 +147,10 @@ internal static class ContextMenuItems
     }
 }
 ```
+
+# Useful Internals
+
+Those are internal classes/methods that I found and thought might be useful. As with any internal stuff your need to keep in mind that this functionality is a subject to change.
+
+- `ScriptAttributeUtility.GetFieldInfoFromProperty`
+- `ScriptAttributeUtility.GetDrawerTypeForType`
