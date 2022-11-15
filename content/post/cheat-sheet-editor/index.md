@@ -28,6 +28,7 @@ draft: false
   - {{<doc PropertyDrawer>}} Customize input field for your serializable c# type
   - {{<doc EditorApplication-projectWindowItemOnGUI>}} Customize project window items
   - {{<doc EditorApplication-hierarchyWindowItemOnGUI>}} Customize hierarchy window items
+  - {{<doc Editor-finishedDefaultHeaderGUI>}} Add UI to default header drawer in Inspector Window
 
 - Draw GUI
   - IMGUI
@@ -64,6 +65,8 @@ draft: false
 
 ## Icons
 - {{<doc EditorGUIUtility.IconContent>}} Load icon texture from editor resources. More at [Editor Icon Browser](https://github.com/ErnSur/unity-editor-icons)
+- {{<doc MonoImporter.SetIcon>}} Sets a custom icon to associate with the imported MonoScript.
+- {{<doc PluginImporter.SetIcon>}} Sets the custom icon to associate with a MonoScript imported by a managed plugin.
 - {{<doc EditorGUIUtility.SetIconForObject>}} Set icon texture for GameObject or MonoScript.
 - {{<doc EditorGUIUtility.SetIconSize>}} Change size of the icon.
 
