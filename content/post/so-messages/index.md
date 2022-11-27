@@ -1,3 +1,8 @@
+---
+title: "Scriptable Object Messages"
+draft: true
+---
+
 ## Scriptable Object Messages
 
 ### Awake
