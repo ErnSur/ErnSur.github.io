@@ -2,6 +2,8 @@
 title: "Maintaining and Delivering a Unity Package 📦"
 date: 2021-10-26
 image: header.png
+categories:
+  - unity
 draft: false
 ---
 
