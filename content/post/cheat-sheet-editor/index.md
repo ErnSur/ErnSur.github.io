@@ -31,6 +31,8 @@ draft: false
   - {{<doc EditorApplication-hierarchyWindowItemOnGUI>}} Customize hierarchy window items
   - {{<doc Editor-finishedDefaultHeaderGUI>}} Add UI to the default header drawer in Inspector Window
 
+- {{<doc EditorApplication.ExecuteMenuItem>}} Invokes the menu item in the specified path
+
 - Draw GUI
   - IMGUI
     - Static classes: {{<doc GUI>}}, {{<doc GUILayout>}}, {{<doc EditorGUI>}}, {{<doc EditorGUILayout>}}
