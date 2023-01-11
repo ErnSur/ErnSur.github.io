@@ -22,37 +22,37 @@ draft: false
     - Supports {{<doc Undo>}} out of the box
 - `UnityEditorInternal.InternalEditorUtility.LoadSerializedFileAndForget` Loads assets from outside of the project folder
 
-- Entry points:
-  - {{<doc InitializeOnLoadAttribute>}} & {{<doc InitializeOnLoadMethodAttribute>}} Allows you to initialize an Editor class when Unity loads, and when your scripts are recompiled
-  - {{<doc EditorApplication-delayCall>}} Delegate which is called once after all inspectors update.
-  - {{<doc EditorApplication-update>}} Similar to `Monobehaviour.Update` but for editor only use
+### Entry points
+- {{<doc InitializeOnLoadAttribute>}} & {{<doc InitializeOnLoadMethodAttribute>}} Allows you to initialize an Editor class when Unity loads, and when your scripts are recompiled
+- {{<doc EditorApplication-delayCall>}} Delegate which is called once after all inspectors update.
+- {{<doc EditorApplication-update>}} Similar to `Monobehaviour.Update` but for editor only use
 ## UI
 
-- Entry points:
-  - {{<doc MenuItem>}} Create context menu items
-  - {{<doc ContextMenu>}} Create object specific context menu items
-  - {{<doc ContextMenuItemAttribute>}} Create property specific context menu items
-  - {{<doc IHasCustomMenu>}} Defines a method to add custom menu items to an Editor Window
-  - {{<doc Editor>}} Create a custom "Inspector view" for the specific component or scriptable object
-  - {{<doc AssetImporters.AssetImporterEditor>}} Create a custom editor for the {{<doc AssetImporters.ScriptedImporter>}}
-  - {{<doc ObjectPreview>}} Create a custom preview for specific component or scriptable object
-  - {{<doc EditorTools.EditorTool>}} Custom tools are like the built-in Move, Rotate, Scale tools or component specific tools like colider bounds editor
-  - {{<doc EditorWindow>}} Create custom windows
-  - {{<doc SettingsProvider>}} Create custom view in Preferences or ProjectSettings windows
-  - {{<doc PropertyDrawer>}} Customize input field for your serializable c# type
-  - {{<doc EditorApplication-contextualPropertyMenu>}} Callback raised whenever the user contex-clicks on a property in an Inspector
-  - {{<doc EditorApplication-projectWindowItemOnGUI>}} Customize project window items
-  - {{<doc EditorApplication-hierarchyWindowItemOnGUI>}} Customize hierarchy window items
-  - {{<doc Editor-finishedDefaultHeaderGUI>}} Add UI to the default header drawer in Inspector Window
+### Entry points
+- {{<doc MenuItem>}} Create context menu items
+- {{<doc ContextMenu>}} Create object specific context menu items
+- {{<doc ContextMenuItemAttribute>}} Create property specific context menu items
+- {{<doc IHasCustomMenu>}} Defines a method to add custom menu items to an Editor Window
+- {{<doc Editor>}} Create a custom "Inspector view" for the specific component or scriptable object
+- {{<doc AssetImporters.AssetImporterEditor>}} Create a custom editor for the {{<doc AssetImporters.ScriptedImporter>}}
+- {{<doc ObjectPreview>}} Create a custom preview for specific component or scriptable object
+- {{<doc EditorTools.EditorTool>}} Custom tools are like the built-in Move, Rotate, Scale tools or component specific tools like colider bounds editor
+- {{<doc EditorWindow>}} Create custom windows
+- {{<doc SettingsProvider>}} Create custom view in Preferences or ProjectSettings windows
+- {{<doc PropertyDrawer>}} Customize input field for your serializable c# type
+- {{<doc EditorApplication-contextualPropertyMenu>}} Callback raised whenever the user contex-clicks on a property in an Inspector
+- {{<doc EditorApplication-projectWindowItemOnGUI>}} Customize project window items
+- {{<doc EditorApplication-hierarchyWindowItemOnGUI>}} Customize hierarchy window items
+- {{<doc Editor-finishedDefaultHeaderGUI>}} Add UI to the default header drawer in Inspector Window
 
-- UI Systems
-  - {{<manual `UI Toolkit` UIElements>}}
-    - Namespaces `UnityEngine.UIElements` and `UnityEditor.UIElements`
-  - {{<manual `IMGUI (Legacy)` GUIScriptingGuide>}}
-    - Static classes: {{<doc GUI>}}, {{<doc GUILayout>}}, {{<doc EditorGUI>}}, {{<doc EditorGUILayout>}}
+### UI Systems
+- {{<manual `UI Toolkit` UIElements>}}
+  - Namespaces `UnityEngine.UIElements` and `UnityEditor.UIElements`
+- {{<manual `IMGUI (Legacy)` GUIScriptingGuide>}}
+  - Static classes: {{<doc GUI>}}, {{<doc GUILayout>}}, {{<doc EditorGUI>}}, {{<doc EditorGUILayout>}}
 
-- Utility
-  - {{<doc EditorGUIUtility-isProSkin>}} is user using a dark or light editor theme
+### Utility
+- {{<doc EditorGUIUtility-isProSkin>}} is user using a dark or light editor theme
 
 ## Scene View
 
@@ -92,7 +92,7 @@ draft: false
 
 > Functions that load or set editor icons will find the appropriate texture for the active editor theme if certain conditions are met  
 > - Icon textures for light and dark themes are in the same directory
-> - Icons for the dark theme are indicated by the prefix:
+> - Icons for the dark theme are indicated by the prefix: "d_"
 > - The icon name or path passed to the function argument was pointing to the light version of the texture
 >   
 > **Example**:  
@@ -106,18 +106,12 @@ draft: false
 - [Iconography](https://www.foundations.unity.com/fundamentals/iconography)
 - {{<doc EditorGUIUtility.IconContent>}} Load icon texture from editor resources. Find icons in [Editor Icon Browser](https://github.com/ErnSur/unity-editor-icons)
 - {{<doc MonoImporter.SetIcon>}} Sets a custom icon to associate with the imported MonoScript.
-- {{<doc PluginImporter.SetIcon>}} Sets the custom icon to associate with a MonoScript imported by a managed plugin.
+- {{<doc PluginImporter.SetIcon>}} Sets the custom icon to associate with a MonoScript imported by a managed plugin (like .dll).
 - {{<doc EditorGUIUtility.SetIconForObject>}} Set icon texture for GameObject or MonoScript.
 - {{<doc EditorGUIUtility.SetIconSize>}} Change IMGUI size of the icon.
 
-## Misc
-- {{<doc EditorGUIUtility.hierarchyMode>}} Reason why `Foldout` can behave differently in inspector view. [Unity Answers](https://answers.unity.com/questions/1320999/editorguifoldout-docs-wrong.html)
-- `EditorInternalUtility.IsValidFileName`
-- `ScriptableSingleton<T>`
-
 
 ## Advanced / Tricks
-
 - {{<doc CustomEditorForRenderPipelineAttribute>}} Tells an Editor class which run-time type it's an editor for when the given RenderPipeline is activated
 - {{<doc IMGUI.Controls.TreeView>}} IMGUI TreeView
 - {{<doc IMGUI.Controls.AdvancedDropdown>}} Dropdown with pages as in "Add Component" button.
@@ -126,6 +120,12 @@ draft: false
   - Enable "Debug-Internal" inspector mode from the tab context menu
   - Bunch of other internal tools, you can look for those in [Unity C#Reference repo](https://github.com/Unity-Technologies/UnityCsReference)
 
+
+## Misc
+- {{<doc EditorGUIUtility.hierarchyMode>}} Reason why `Foldout` can behave differently in inspector view. [Unity Answers](https://answers.unity.com/questions/1320999/editorguifoldout-docs-wrong.html)
+- `EditorInternalUtility.IsValidFileName`
+
+
 ## Resources
 
 - [Unity Editor Foundations](https://www.foundations.unity.com/)
@@ -133,7 +133,7 @@ draft: false
 - [My GitHub projects](https://github.com/ernsur "https://github.com/ernsur") & [Stars](https://github.com/ErnSur?tab=stars "https://github.com/ErnSur?tab=stars")
 - [Unity Forums](https://forum.unity.com/forums/ui-toolkit.178/)
 
-# Useful Internals
+## Useful Internals
 
 Those are internal classes/methods that I found and thought might be useful. As with any internal stuff your need to keep in mind that this functionality is subject to change.
 
@@ -141,5 +141,5 @@ Those are internal classes/methods that I found and thought might be useful. As 
 - `ScriptAttributeUtility.GetDrawerTypeForType`
 - You can create an assembly with a name like "Unity.InternalAPIEditorBridge.<index>" that has access to the editor's internal API. To find possible indexes search [editor source code](https://github.com/Unity-Technologies/UnityCsReference/blob/master/Editor/Mono/AssemblyInfo/AssemblyInfo.cs)
 
-# Obscure
+## Obscure
 - {{<doc IApplyRevertPropertyContextMenuItemProvider>}}
