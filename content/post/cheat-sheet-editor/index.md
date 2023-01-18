@@ -9,6 +9,8 @@ draft: false
 ---
 
 ## Asset Management
+> - Asset - An object imported from project file. One project file can be imported into many assets, like a png tileset image can be imported into many sprite assets.
+
 - {{<doc AssetDatabase>}} CRUD for project assets
   - Operates on project relative paths and asset GUIDs
 - {{<doc Resources>}} Allows you to find and access Objects including assets
@@ -21,6 +23,8 @@ draft: false
     - Apply overrides
     - Supports {{<doc Undo>}} out of the box
 - `UnityEditorInternal.InternalEditorUtility.LoadSerializedFileAndForget` Loads assets from outside of the project folder
+- {{<manual `Special Folder Names` SpecialFolders>}}
+
 
 ### Entry points
 - {{<doc InitializeOnLoadAttribute>}} & {{<doc InitializeOnLoadMethodAttribute>}} Allows you to initialize an Editor class when Unity loads, and when your scripts are recompiled
