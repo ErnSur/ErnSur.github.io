@@ -35,7 +35,7 @@ params:
 
     sidebar:
         emoji: 
-        subtitle: My Vault
+        subtitle: Unity Workflow Developer
         avatar:
             enabled: true
             local: false
@@ -204,7 +204,7 @@ markup:
             unsafe: false
     tableOfContents:
         endLevel: 4
-        ordered: true
+        ordered: false
         startLevel: 2
     highlight:
         noClasses: false

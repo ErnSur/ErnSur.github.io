@@ -13,7 +13,7 @@ Whether you call it a library or a package, it’s a common practice to bundle a
 
 Even though NuGet manages C# code, Unity was not designed to be compatible with it. NuGet also delivers DLLs, which also limit development capabilities in the Unity environment. This is because Unity Editor and its libraries API evolves fast, and without conditional compilation, it becomes harder to code against many different versions of the editor and its modules. Another difference between the regular .NET package and Unity is that the Unity package may depend on assets other than the code.
 
-# Current packaging solution
+## Current packaging solution
 
 Currently, the most common way to share your code and assets in the Unity community is with Unity’s archive format “.unitypackage”. For the sake of simplicity, I will call .unitypackage files “asset packages”, same as in the [Unity manual](https://docs.unity3d.com/Manual/AssetPackages.html).
 
@@ -33,7 +33,7 @@ The asset package itself is simply an archive, and is not connected to any packa
 
 Let’s say that you created a new asset package version. Some of the changes include removed or relocated files. The user is now importing this new package but already has an older version of it in the project. Files that were previously removed will now be present again. This is especially important if you are working with special folders in Unity like Resources or Editor: if you want to move existing assets in or out of them, you’re out of luck. You will either have to ask the user to delete the old package by him/herself or you will need to write some code to delete those files automatically — which is not an easy task, considering its mutable state.
 
-## Hard to remove and Easy to break ❌
+## Hard to remove and easy to break ❌
 
 - Unity Projects consist of many different folders, but when you open up Unity Editor you can only see two of them inside the Project Window: Assets and Packages.  
 - The assets folder is the main working directory and there is no common standard on how developers and artists organize it. They will create, delete and move files constantly.  
@@ -55,9 +55,9 @@ There are already good resources on how to create a UPM package and even set up 
 
 Let’s focus on your distribution options based on our use case:
 
-# Open source package, available for everyone:
+## Open source package, available for everyone:
 
-## Git repository
+### Git repository
 
 This is the simplest one, you just need to create a public repository where you’ll be developing the package. Additionally, you can add your package to [OpenUPM.com](https://openupm.com/), an Open Source Unity Package Registry.
 
@@ -73,7 +73,7 @@ Cons:
 - Limited dependency resolution
 - Package needs to be public
 
-## Scoped Registry
+### Scoped Registry
 
 > _Scoped Registries allow Unity to communicate the location of any custom package registry server to the Package Manager so that the user has access to several collections of packages at the same time._
 
@@ -92,7 +92,7 @@ Cons:
 
 [Run your own Unity Package Server! | by Markus X. Hofer | Medium](https://medium.com/@markushofer/run-your-own-unity-package-server-b4fe9995704e)
 
-## Tarballs
+### Tarballs
 
 The tarball is also an archive file, but when imported into Unity its content is treated as immutable.
 
@@ -112,7 +112,7 @@ Cons:
 - Unity 2018 has no UI for importing tarballs
 - Limited dependency resolution
 
-## Asset Package with UPM package
+### Asset Package with UPM package
 
 There is also a concept of an embedded UPM package. This is a package that is stored locally in the “Packages” directory. This is the case, for example, when you are developing a UPM package. What you could do is simply export the package directory as an asset package and share it this way.
 
@@ -129,15 +129,15 @@ Cons:
 
 - All of the cons of Asset Package
 
-# Closed source package, private/internal use
+## Closed source package, private/internal use
 
 If you work in a company and share your internal libraries with your co-workers more setup is needed.
 
-## Simplest option: private repositories
+### Simplest option: private repositories
 
 You can host your package in a private repository and add it to the project with a git URL. The limitation of this solution is that UPM won’t ask you for credentials to authenticate your access. The simplest solution, in this case, is to use SSH URLs. The [Unity manual](https://docs.unity3d.com/Manual/upm-errors.html#prompts-disabled) has more info regarding this problem.
 
-## Private Scoped Registry
+### Private Scoped Registry
 
 This solution would be viable for companies where there are many internal packages and an administrator that can manage this setup. Unfortunately for now (2021), this solution is more of an MVP feature.
 
@@ -152,11 +152,11 @@ Cons:
 - Available only for Unity Editor 2019.3.4f1+
 - Requires convoluted setup for registry and each user
 
-## Tarballs
+### Tarballs
 
 If you want to share your package with selected users but don’t want them to access your repository and set up the ssh key you can use tarballs.
 
-# My Solution ✔️
+## My Solution ✔️
 
 I worked at a company, where I was developing a Unity SDK that enabled developers to integrate eCommerce and add ads into the 3D space of their games. Because of it, I had some limitations in what I could do. For example, I had to distribute my package to authorized users only, so it narrowed my options to closed-source ones.  
 I also couldn’t expect my users to go over an elaborate setup process on each system just to access my package, so I had to rule out the private repository and scoped registry options.  
