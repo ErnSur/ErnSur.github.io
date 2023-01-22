@@ -2,6 +2,7 @@ baseurl: https://ErnSur.github.io
 languageCode: en-us
 paginate: 5
 title: "Ernest Suryś"
+theme: 'hugo-theme-stack'
 
 # Change it to your Disqus shortname before using
 disqusShortname: ern-sur-blog
@@ -214,10 +215,3 @@ markup:
         lineNos: true
         lineNumbersInTable: true
         tabWidth: 4
-
-module:
-  # uncomment line below for temporary local development of module
-  # replacements: "github.com/CaiJimmy/hugo-theme-stack/v3 -> ../../hugo-theme-stack"
-  imports:
-    - path: github.com/CaiJimmy/hugo-theme-stack/v3
-      disable: false
