@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Editor Scripting on Ernest Suryś</title><link>https://ErnSur.github.io/categories/editor/</link><description>Recent content in Editor Scripting on Ernest Suryś</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 16 Jul 2022 20:47:30 +0200</lastBuildDate><atom:link href="https://ErnSur.github.io/categories/editor/index.xml" rel="self" type="application/rss+xml"/><item><title>Unity Editor Scripting Cheat Sheet</title><link>https://ErnSur.github.io/p/unity-editor-scripting-cheat-sheet/</link><pubDate>Sat, 16 Jul 2022 20:47:30 +0200</pubDate><guid>https://ErnSur.github.io/p/unity-editor-scripting-cheat-sheet/</guid><description>&lt;img src="https://ErnSur.github.io/p/unity-editor-scripting-cheat-sheet/header.png" alt="Featured image of post Unity Editor Scripting Cheat Sheet" />&lt;h2 id="asset-management">Asset Management&lt;/h2>
+&lt;blockquote>
 &lt;ul>
-&lt;li>
-&lt;p>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/AssetDatabase.html" target="_blank" rel="noopener">AssetDatabase&lt;/a>&lt;/code> CRUD for project assets&lt;/p>
+&lt;li>Asset - An object imported from project file. One project file can be imported into many assets, like a png tileset image can be imported into many sprite assets.&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/AssetDatabase.html" target="_blank" rel="noopener">AssetDatabase&lt;/a>&lt;/code> CRUD for project assets
 &lt;ul>
 &lt;li>Operates on project relative paths and asset GUIDs&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>
-&lt;p>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/Resources.html" target="_blank" rel="noopener">Resources&lt;/a>&lt;/code> Allows you to find and access Objects including assets&lt;/p>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/Resources.html" target="_blank" rel="noopener">Resources&lt;/a>&lt;/code> Allows you to find and access Objects including assets
 &lt;ul>
 &lt;li>Can load assets without project relative paths&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>
-&lt;p>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/AssetPostprocessor.html" target="_blank" rel="noopener">AssetPostprocessor&lt;/a>&lt;/code> &amp;amp; &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/AssetModificationProcessor.html" target="_blank" rel="noopener">AssetModificationProcessor&lt;/a>&lt;/code> Take action after asset import&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/PrefabUtility.html" target="_blank" rel="noopener">PrefabUtility&lt;/a>&lt;/code> Inspect / Modify Prefabs&lt;/p>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/AssetPostprocessor.html" target="_blank" rel="noopener">AssetPostprocessor&lt;/a>&lt;/code> &amp;amp; &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/AssetModificationProcessor.html" target="_blank" rel="noopener">AssetModificationProcessor&lt;/a>&lt;/code> Take action after asset import&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/PrefabUtility.html" target="_blank" rel="noopener">PrefabUtility&lt;/a>&lt;/code> Inspect / Modify Prefabs
 &lt;ul>
 &lt;li>Instantiate prefabs in the scene as &amp;ldquo;prefab instances&amp;rdquo; and not regular game objects&lt;/li>
 &lt;li>Create prefab variants&lt;/li>
@@ -25,22 +25,17 @@
 &lt;li>Supports &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/Undo.html" target="_blank" rel="noopener">Undo&lt;/a>&lt;/code> out of the box&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>
-&lt;p>&lt;code>UnityEditorInternal.InternalEditorUtility.LoadSerializedFileAndForget&lt;/code> Loads assets from outside of the project folder&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Entry points:&lt;/p>
+&lt;li>&lt;code>UnityEditorInternal.InternalEditorUtility.LoadSerializedFileAndForget&lt;/code> Loads assets from outside of the project folder&lt;/li>
+&lt;li>&lt;b>&lt;a class="link" href="https://docs.unity3d.com/Manual/SpecialFolders.html" target="_blank" rel="noopener">Special Folder Names&lt;/a>&lt;/b>&lt;/li>
+&lt;/ul>
+&lt;h3 id="entry-points">Entry points&lt;/h3>
 &lt;ul>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/InitializeOnLoadAttribute.html" target="_blank" rel="noopener">InitializeOnLoadAttribute&lt;/a>&lt;/code> &amp;amp; &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/InitializeOnLoadMethodAttribute.html" target="_blank" rel="noopener">InitializeOnLoadMethodAttribute&lt;/a>&lt;/code> Allows you to initialize an Editor class when Unity loads, and when your scripts are recompiled&lt;/li>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorApplication-delayCall.html" target="_blank" rel="noopener">EditorApplication.delayCall&lt;/a>&lt;/code> Delegate which is called once after all inspectors update.&lt;/li>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorApplication-update.html" target="_blank" rel="noopener">EditorApplication.update&lt;/a>&lt;/code> Similar to &lt;code>Monobehaviour.Update&lt;/code> but for editor only use&lt;/li>
 &lt;/ul>
-&lt;/li>
-&lt;/ul>
 &lt;h2 id="ui">UI&lt;/h2>
-&lt;ul>
-&lt;li>
-&lt;p>Entry points:&lt;/p>
+&lt;h3 id="entry-points-1">Entry points&lt;/h3>
 &lt;ul>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/MenuItem.html" target="_blank" rel="noopener">MenuItem&lt;/a>&lt;/code> Create context menu items&lt;/li>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/ContextMenu.html" target="_blank" rel="noopener">ContextMenu&lt;/a>&lt;/code> Create object specific context menu items&lt;/li>
@@ -58,28 +53,22 @@
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorApplication-hierarchyWindowItemOnGUI.html" target="_blank" rel="noopener">EditorApplication.hierarchyWindowItemOnGUI&lt;/a>&lt;/code> Customize hierarchy window items&lt;/li>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/Editor-finishedDefaultHeaderGUI.html" target="_blank" rel="noopener">Editor.finishedDefaultHeaderGUI&lt;/a>&lt;/code> Add UI to the default header drawer in Inspector Window&lt;/li>
 &lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>UI Systems&lt;/p>
+&lt;h3 id="ui-systems">UI Systems&lt;/h3>
 &lt;ul>
-&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/Manual/UIElements.html" target="_blank" rel="noopener">UI Toolkit&lt;/a>&lt;/code>
+&lt;li>&lt;b>&lt;a class="link" href="https://docs.unity3d.com/Manual/UIElements.html" target="_blank" rel="noopener">UI Toolkit&lt;/a>&lt;/b>
 &lt;ul>
 &lt;li>Namespaces &lt;code>UnityEngine.UIElements&lt;/code> and &lt;code>UnityEditor.UIElements&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/Manual/GUIScriptingGuide.html" target="_blank" rel="noopener">IMGUI (Legacy)&lt;/a>&lt;/code>
+&lt;li>&lt;b>&lt;a class="link" href="https://docs.unity3d.com/Manual/GUIScriptingGuide.html" target="_blank" rel="noopener">IMGUI (Legacy)&lt;/a>&lt;/b>
 &lt;ul>
 &lt;li>Static classes: &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/GUI.html" target="_blank" rel="noopener">GUI&lt;/a>&lt;/code>, &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/GUILayout.html" target="_blank" rel="noopener">GUILayout&lt;/a>&lt;/code>, &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorGUI.html" target="_blank" rel="noopener">EditorGUI&lt;/a>&lt;/code>, &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorGUILayout.html" target="_blank" rel="noopener">EditorGUILayout&lt;/a>&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Utility&lt;/p>
+&lt;h3 id="utility">Utility&lt;/h3>
 &lt;ul>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorGUIUtility-isProSkin.html" target="_blank" rel="noopener">EditorGUIUtility.isProSkin&lt;/a>&lt;/code> is user using a dark or light editor theme&lt;/li>
-&lt;/ul>
-&lt;/li>
 &lt;/ul>
 &lt;h2 id="scene-view">Scene View&lt;/h2>
 &lt;ul>
@@ -127,7 +116,7 @@
 &lt;p>Functions that load or set editor icons will find the appropriate texture for the active editor theme if certain conditions are met&lt;/p>
 &lt;ul>
 &lt;li>Icon textures for light and dark themes are in the same directory&lt;/li>
-&lt;li>Icons for the dark theme are indicated by the prefix:&lt;/li>
+&lt;li>Icons for the dark theme are indicated by the prefix: &amp;ldquo;d_&amp;rdquo;&lt;/li>
 &lt;li>The icon name or path passed to the function argument was pointing to the light version of the texture&lt;/li>
 &lt;/ul>
 &lt;p>&lt;strong>Example&lt;/strong>:&lt;br>
@@ -145,16 +134,9 @@ In the above example editor shows different mono importer icons depending on the
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorGUIUtility.IconContent.html" target="_blank" rel="noopener">EditorGUIUtility.IconContent&lt;/a>&lt;/code> Load icon texture from editor resources. Find icons in &lt;a class="link" href="https://github.com/ErnSur/unity-editor-icons" target="_blank" rel="noopener"
 >Editor Icon Browser&lt;/a>&lt;/li>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/MonoImporter.SetIcon.html" target="_blank" rel="noopener">MonoImporter.SetIcon&lt;/a>&lt;/code> Sets a custom icon to associate with the imported MonoScript.&lt;/li>
-&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/PluginImporter.SetIcon.html" target="_blank" rel="noopener">PluginImporter.SetIcon&lt;/a>&lt;/code> Sets the custom icon to associate with a MonoScript imported by a managed plugin.&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/PluginImporter.SetIcon.html" target="_blank" rel="noopener">PluginImporter.SetIcon&lt;/a>&lt;/code> Sets the custom icon to associate with a MonoScript imported by a managed plugin (like .dll).&lt;/li>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorGUIUtility.SetIconForObject.html" target="_blank" rel="noopener">EditorGUIUtility.SetIconForObject&lt;/a>&lt;/code> Set icon texture for GameObject or MonoScript.&lt;/li>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorGUIUtility.SetIconSize.html" target="_blank" rel="noopener">EditorGUIUtility.SetIconSize&lt;/a>&lt;/code> Change IMGUI size of the icon.&lt;/li>
-&lt;/ul>
-&lt;h2 id="misc">Misc&lt;/h2>
-&lt;ul>
-&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorGUIUtility.hierarchyMode.html" target="_blank" rel="noopener">EditorGUIUtility.hierarchyMode&lt;/a>&lt;/code> Reason why &lt;code>Foldout&lt;/code> can behave differently in inspector view. &lt;a class="link" href="https://answers.unity.com/questions/1320999/editorguifoldout-docs-wrong.html" target="_blank" rel="noopener"
->Unity Answers&lt;/a>&lt;/li>
-&lt;li>&lt;code>EditorInternalUtility.IsValidFileName&lt;/code>&lt;/li>
-&lt;li>&lt;code>ScriptableSingleton&amp;lt;T&amp;gt;&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;h2 id="advanced--tricks">Advanced / Tricks&lt;/h2>
 &lt;ul>
@@ -170,6 +152,12 @@ In the above example editor shows different mono importer icons depending on the
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
+&lt;h2 id="misc">Misc&lt;/h2>
+&lt;ul>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorGUIUtility.hierarchyMode.html" target="_blank" rel="noopener">EditorGUIUtility.hierarchyMode&lt;/a>&lt;/code> Reason why &lt;code>Foldout&lt;/code> can behave differently in inspector view. &lt;a class="link" href="https://answers.unity.com/questions/1320999/editorguifoldout-docs-wrong.html" target="_blank" rel="noopener"
+>Unity Answers&lt;/a>&lt;/li>
+&lt;li>&lt;code>EditorInternalUtility.IsValidFileName&lt;/code>&lt;/li>
+&lt;/ul>
 &lt;h2 id="resources">Resources&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a class="link" href="https://www.foundations.unity.com/" target="_blank" rel="noopener"
@@ -184,7 +172,7 @@ target="_blank" rel="noopener"
 &lt;li>&lt;a class="link" href="https://forum.unity.com/forums/ui-toolkit.178/" target="_blank" rel="noopener"
 >Unity Forums&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;h1 id="useful-internals">Useful Internals&lt;/h1>
+&lt;h2 id="useful-internals">Useful Internals&lt;/h2>
 &lt;p>Those are internal classes/methods that I found and thought might be useful. As with any internal stuff your need to keep in mind that this functionality is subject to change.&lt;/p>
 &lt;ul>
 &lt;li>&lt;code>ScriptAttributeUtility.GetFieldInfoFromProperty&lt;/code>&lt;/li>
@@ -192,7 +180,7 @@ target="_blank" rel="noopener"
 &lt;li>You can create an assembly with a name like &amp;ldquo;Unity.InternalAPIEditorBridge.&lt;!-- raw HTML omitted -->&amp;rdquo; that has access to the editor&amp;rsquo;s internal API. To find possible indexes search &lt;a class="link" href="https://github.com/Unity-Technologies/UnityCsReference/blob/master/Editor/Mono/AssemblyInfo/AssemblyInfo.cs" target="_blank" rel="noopener"
 >editor source code&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;h1 id="obscure">Obscure&lt;/h1>
+&lt;h2 id="obscure">Obscure&lt;/h2>
 &lt;ul>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/IApplyRevertPropertyContextMenuItemProvider.html" target="_blank" rel="noopener">IApplyRevertPropertyContextMenuItemProvider&lt;/a>&lt;/code>&lt;/li>
 &lt;/ul></description></item></channel></rss>

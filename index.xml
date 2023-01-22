@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ernest Suryś</title><link>https://ErnSur.github.io/</link><description>Recent content on Ernest Suryś</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 16 Jul 2022 20:47:30 +0200</lastBuildDate><atom:link href="https://ErnSur.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Unity Editor Scripting Cheat Sheet</title><link>https://ErnSur.github.io/p/unity-editor-scripting-cheat-sheet/</link><pubDate>Sat, 16 Jul 2022 20:47:30 +0200</pubDate><guid>https://ErnSur.github.io/p/unity-editor-scripting-cheat-sheet/</guid><description>&lt;img src="https://ErnSur.github.io/p/unity-editor-scripting-cheat-sheet/header.png" alt="Featured image of post Unity Editor Scripting Cheat Sheet" />&lt;h2 id="asset-management">Asset Management&lt;/h2>
+&lt;blockquote>
 &lt;ul>
-&lt;li>
-&lt;p>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/AssetDatabase.html" target="_blank" rel="noopener">AssetDatabase&lt;/a>&lt;/code> CRUD for project assets&lt;/p>
+&lt;li>Asset - An object imported from project file. One project file can be imported into many assets, like a png tileset image can be imported into many sprite assets.&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/AssetDatabase.html" target="_blank" rel="noopener">AssetDatabase&lt;/a>&lt;/code> CRUD for project assets
 &lt;ul>
 &lt;li>Operates on project relative paths and asset GUIDs&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>
-&lt;p>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/Resources.html" target="_blank" rel="noopener">Resources&lt;/a>&lt;/code> Allows you to find and access Objects including assets&lt;/p>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/Resources.html" target="_blank" rel="noopener">Resources&lt;/a>&lt;/code> Allows you to find and access Objects including assets
 &lt;ul>
 &lt;li>Can load assets without project relative paths&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>
-&lt;p>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/AssetPostprocessor.html" target="_blank" rel="noopener">AssetPostprocessor&lt;/a>&lt;/code> &amp;amp; &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/AssetModificationProcessor.html" target="_blank" rel="noopener">AssetModificationProcessor&lt;/a>&lt;/code> Take action after asset import&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/PrefabUtility.html" target="_blank" rel="noopener">PrefabUtility&lt;/a>&lt;/code> Inspect / Modify Prefabs&lt;/p>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/AssetPostprocessor.html" target="_blank" rel="noopener">AssetPostprocessor&lt;/a>&lt;/code> &amp;amp; &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/AssetModificationProcessor.html" target="_blank" rel="noopener">AssetModificationProcessor&lt;/a>&lt;/code> Take action after asset import&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/PrefabUtility.html" target="_blank" rel="noopener">PrefabUtility&lt;/a>&lt;/code> Inspect / Modify Prefabs
 &lt;ul>
 &lt;li>Instantiate prefabs in the scene as &amp;ldquo;prefab instances&amp;rdquo; and not regular game objects&lt;/li>
 &lt;li>Create prefab variants&lt;/li>
@@ -25,22 +25,17 @@
 &lt;li>Supports &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/Undo.html" target="_blank" rel="noopener">Undo&lt;/a>&lt;/code> out of the box&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>
-&lt;p>&lt;code>UnityEditorInternal.InternalEditorUtility.LoadSerializedFileAndForget&lt;/code> Loads assets from outside of the project folder&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Entry points:&lt;/p>
+&lt;li>&lt;code>UnityEditorInternal.InternalEditorUtility.LoadSerializedFileAndForget&lt;/code> Loads assets from outside of the project folder&lt;/li>
+&lt;li>&lt;b>&lt;a class="link" href="https://docs.unity3d.com/Manual/SpecialFolders.html" target="_blank" rel="noopener">Special Folder Names&lt;/a>&lt;/b>&lt;/li>
+&lt;/ul>
+&lt;h3 id="entry-points">Entry points&lt;/h3>
 &lt;ul>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/InitializeOnLoadAttribute.html" target="_blank" rel="noopener">InitializeOnLoadAttribute&lt;/a>&lt;/code> &amp;amp; &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/InitializeOnLoadMethodAttribute.html" target="_blank" rel="noopener">InitializeOnLoadMethodAttribute&lt;/a>&lt;/code> Allows you to initialize an Editor class when Unity loads, and when your scripts are recompiled&lt;/li>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorApplication-delayCall.html" target="_blank" rel="noopener">EditorApplication.delayCall&lt;/a>&lt;/code> Delegate which is called once after all inspectors update.&lt;/li>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorApplication-update.html" target="_blank" rel="noopener">EditorApplication.update&lt;/a>&lt;/code> Similar to &lt;code>Monobehaviour.Update&lt;/code> but for editor only use&lt;/li>
 &lt;/ul>
-&lt;/li>
-&lt;/ul>
 &lt;h2 id="ui">UI&lt;/h2>
-&lt;ul>
-&lt;li>
-&lt;p>Entry points:&lt;/p>
+&lt;h3 id="entry-points-1">Entry points&lt;/h3>
 &lt;ul>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/MenuItem.html" target="_blank" rel="noopener">MenuItem&lt;/a>&lt;/code> Create context menu items&lt;/li>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/ContextMenu.html" target="_blank" rel="noopener">ContextMenu&lt;/a>&lt;/code> Create object specific context menu items&lt;/li>
@@ -58,28 +53,22 @@
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorApplication-hierarchyWindowItemOnGUI.html" target="_blank" rel="noopener">EditorApplication.hierarchyWindowItemOnGUI&lt;/a>&lt;/code> Customize hierarchy window items&lt;/li>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/Editor-finishedDefaultHeaderGUI.html" target="_blank" rel="noopener">Editor.finishedDefaultHeaderGUI&lt;/a>&lt;/code> Add UI to the default header drawer in Inspector Window&lt;/li>
 &lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>UI Systems&lt;/p>
+&lt;h3 id="ui-systems">UI Systems&lt;/h3>
 &lt;ul>
-&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/Manual/UIElements.html" target="_blank" rel="noopener">UI Toolkit&lt;/a>&lt;/code>
+&lt;li>&lt;b>&lt;a class="link" href="https://docs.unity3d.com/Manual/UIElements.html" target="_blank" rel="noopener">UI Toolkit&lt;/a>&lt;/b>
 &lt;ul>
 &lt;li>Namespaces &lt;code>UnityEngine.UIElements&lt;/code> and &lt;code>UnityEditor.UIElements&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/Manual/GUIScriptingGuide.html" target="_blank" rel="noopener">IMGUI (Legacy)&lt;/a>&lt;/code>
+&lt;li>&lt;b>&lt;a class="link" href="https://docs.unity3d.com/Manual/GUIScriptingGuide.html" target="_blank" rel="noopener">IMGUI (Legacy)&lt;/a>&lt;/b>
 &lt;ul>
 &lt;li>Static classes: &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/GUI.html" target="_blank" rel="noopener">GUI&lt;/a>&lt;/code>, &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/GUILayout.html" target="_blank" rel="noopener">GUILayout&lt;/a>&lt;/code>, &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorGUI.html" target="_blank" rel="noopener">EditorGUI&lt;/a>&lt;/code>, &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorGUILayout.html" target="_blank" rel="noopener">EditorGUILayout&lt;/a>&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Utility&lt;/p>
+&lt;h3 id="utility">Utility&lt;/h3>
 &lt;ul>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorGUIUtility-isProSkin.html" target="_blank" rel="noopener">EditorGUIUtility.isProSkin&lt;/a>&lt;/code> is user using a dark or light editor theme&lt;/li>
-&lt;/ul>
-&lt;/li>
 &lt;/ul>
 &lt;h2 id="scene-view">Scene View&lt;/h2>
 &lt;ul>
@@ -127,7 +116,7 @@
 &lt;p>Functions that load or set editor icons will find the appropriate texture for the active editor theme if certain conditions are met&lt;/p>
 &lt;ul>
 &lt;li>Icon textures for light and dark themes are in the same directory&lt;/li>
-&lt;li>Icons for the dark theme are indicated by the prefix:&lt;/li>
+&lt;li>Icons for the dark theme are indicated by the prefix: &amp;ldquo;d_&amp;rdquo;&lt;/li>
 &lt;li>The icon name or path passed to the function argument was pointing to the light version of the texture&lt;/li>
 &lt;/ul>
 &lt;p>&lt;strong>Example&lt;/strong>:&lt;br>
@@ -145,16 +134,9 @@ In the above example editor shows different mono importer icons depending on the
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorGUIUtility.IconContent.html" target="_blank" rel="noopener">EditorGUIUtility.IconContent&lt;/a>&lt;/code> Load icon texture from editor resources. Find icons in &lt;a class="link" href="https://github.com/ErnSur/unity-editor-icons" target="_blank" rel="noopener"
 >Editor Icon Browser&lt;/a>&lt;/li>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/MonoImporter.SetIcon.html" target="_blank" rel="noopener">MonoImporter.SetIcon&lt;/a>&lt;/code> Sets a custom icon to associate with the imported MonoScript.&lt;/li>
-&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/PluginImporter.SetIcon.html" target="_blank" rel="noopener">PluginImporter.SetIcon&lt;/a>&lt;/code> Sets the custom icon to associate with a MonoScript imported by a managed plugin.&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/PluginImporter.SetIcon.html" target="_blank" rel="noopener">PluginImporter.SetIcon&lt;/a>&lt;/code> Sets the custom icon to associate with a MonoScript imported by a managed plugin (like .dll).&lt;/li>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorGUIUtility.SetIconForObject.html" target="_blank" rel="noopener">EditorGUIUtility.SetIconForObject&lt;/a>&lt;/code> Set icon texture for GameObject or MonoScript.&lt;/li>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorGUIUtility.SetIconSize.html" target="_blank" rel="noopener">EditorGUIUtility.SetIconSize&lt;/a>&lt;/code> Change IMGUI size of the icon.&lt;/li>
-&lt;/ul>
-&lt;h2 id="misc">Misc&lt;/h2>
-&lt;ul>
-&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorGUIUtility.hierarchyMode.html" target="_blank" rel="noopener">EditorGUIUtility.hierarchyMode&lt;/a>&lt;/code> Reason why &lt;code>Foldout&lt;/code> can behave differently in inspector view. &lt;a class="link" href="https://answers.unity.com/questions/1320999/editorguifoldout-docs-wrong.html" target="_blank" rel="noopener"
->Unity Answers&lt;/a>&lt;/li>
-&lt;li>&lt;code>EditorInternalUtility.IsValidFileName&lt;/code>&lt;/li>
-&lt;li>&lt;code>ScriptableSingleton&amp;lt;T&amp;gt;&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;h2 id="advanced--tricks">Advanced / Tricks&lt;/h2>
 &lt;ul>
@@ -170,6 +152,12 @@ In the above example editor shows different mono importer icons depending on the
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
+&lt;h2 id="misc">Misc&lt;/h2>
+&lt;ul>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorGUIUtility.hierarchyMode.html" target="_blank" rel="noopener">EditorGUIUtility.hierarchyMode&lt;/a>&lt;/code> Reason why &lt;code>Foldout&lt;/code> can behave differently in inspector view. &lt;a class="link" href="https://answers.unity.com/questions/1320999/editorguifoldout-docs-wrong.html" target="_blank" rel="noopener"
+>Unity Answers&lt;/a>&lt;/li>
+&lt;li>&lt;code>EditorInternalUtility.IsValidFileName&lt;/code>&lt;/li>
+&lt;/ul>
 &lt;h2 id="resources">Resources&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a class="link" href="https://www.foundations.unity.com/" target="_blank" rel="noopener"
@@ -184,7 +172,7 @@ target="_blank" rel="noopener"
 &lt;li>&lt;a class="link" href="https://forum.unity.com/forums/ui-toolkit.178/" target="_blank" rel="noopener"
 >Unity Forums&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;h1 id="useful-internals">Useful Internals&lt;/h1>
+&lt;h2 id="useful-internals">Useful Internals&lt;/h2>
 &lt;p>Those are internal classes/methods that I found and thought might be useful. As with any internal stuff your need to keep in mind that this functionality is subject to change.&lt;/p>
 &lt;ul>
 &lt;li>&lt;code>ScriptAttributeUtility.GetFieldInfoFromProperty&lt;/code>&lt;/li>
@@ -192,13 +180,13 @@ target="_blank" rel="noopener"
 &lt;li>You can create an assembly with a name like &amp;ldquo;Unity.InternalAPIEditorBridge.&lt;!-- raw HTML omitted -->&amp;rdquo; that has access to the editor&amp;rsquo;s internal API. To find possible indexes search &lt;a class="link" href="https://github.com/Unity-Technologies/UnityCsReference/blob/master/Editor/Mono/AssemblyInfo/AssemblyInfo.cs" target="_blank" rel="noopener"
 >editor source code&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;h1 id="obscure">Obscure&lt;/h1>
+&lt;h2 id="obscure">Obscure&lt;/h2>
 &lt;ul>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/IApplyRevertPropertyContextMenuItemProvider.html" target="_blank" rel="noopener">IApplyRevertPropertyContextMenuItemProvider&lt;/a>&lt;/code>&lt;/li>
 &lt;/ul></description></item><item><title>Maintaining and Delivering a Unity Package 📦</title><link>https://ErnSur.github.io/p/maintaining-and-delivering-a-unity-package/</link><pubDate>Tue, 26 Oct 2021 00:00:00 +0000</pubDate><guid>https://ErnSur.github.io/p/maintaining-and-delivering-a-unity-package/</guid><description>&lt;img src="https://ErnSur.github.io/p/maintaining-and-delivering-a-unity-package/header.png" alt="Featured image of post Maintaining and Delivering a Unity Package 📦" />&lt;p>Whether you call it a library or a package, it’s a common practice to bundle a bunch of code into an entity that you might later reuse on many different projects. To distribute it, you usually use package managers like npm, pip, or NuGet.&lt;/p>
 &lt;h2 id="what-about-unity">What about Unity?&lt;/h2>
 &lt;p>Even though NuGet manages C# code, Unity was not designed to be compatible with it. NuGet also delivers DLLs, which also limit development capabilities in the Unity environment. This is because Unity Editor and its libraries API evolves fast, and without conditional compilation, it becomes harder to code against many different versions of the editor and its modules. Another difference between the regular .NET package and Unity is that the Unity package may depend on assets other than the code.&lt;/p>
-&lt;h1 id="current-packaging-solution">Current packaging solution&lt;/h1>
+&lt;h2 id="current-packaging-solution">Current packaging solution&lt;/h2>
 &lt;p>Currently, the most common way to share your code and assets in the Unity community is with Unity’s archive format “.unitypackage”. For the sake of simplicity, I will call .unitypackage files “asset packages”, same as in the &lt;a class="link" href="https://docs.unity3d.com/Manual/AssetPackages.html" target="_blank" rel="noopener"
 >Unity manual&lt;/a>.&lt;/p>
 &lt;p>If you are a code library maintainer and want your users to be happy, there are some common aspects you will want your package to have:&lt;/p>
@@ -213,7 +201,7 @@ target="_blank" rel="noopener"
 &lt;p>The asset package itself is simply an archive, and is not connected to any package management system. Importing it just adds new files and overrides old ones. That’s why delivering library updates with asset packages presents certain problems:&lt;/p>
 &lt;h2 id="hard-to-update-">Hard to update ❌&lt;/h2>
 &lt;p>Let’s say that you created a new asset package version. Some of the changes include removed or relocated files. The user is now importing this new package but already has an older version of it in the project. Files that were previously removed will now be present again. This is especially important if you are working with special folders in Unity like Resources or Editor: if you want to move existing assets in or out of them, you’re out of luck. You will either have to ask the user to delete the old package by him/herself or you will need to write some code to delete those files automatically — which is not an easy task, considering its mutable state.&lt;/p>
-&lt;h2 id="hard-to-remove-and-easy-to-break-">Hard to remove and Easy to break ❌&lt;/h2>
+&lt;h2 id="hard-to-remove-and-easy-to-break-">Hard to remove and easy to break ❌&lt;/h2>
 &lt;ul>
 &lt;li>Unity Projects consist of many different folders, but when you open up Unity Editor you can only see two of them inside the Project Window: Assets and Packages.&lt;/li>
 &lt;li>The assets folder is the main working directory and there is no common standard on how developers and artists organize it. They will create, delete and move files constantly.&lt;/li>
@@ -231,8 +219,8 @@ target="_blank" rel="noopener"
 &lt;p>&lt;a class="link" href="https://medium.com/runic-software/simple-guide-to-unity-package-management-4aea43d1baf7" target="_blank" rel="noopener"
 >Simple Guide to Unity Package Management | by Paul Harwood | Runic Software | Medium&lt;/a>&lt;/p>
 &lt;p>Let’s focus on your distribution options based on our use case:&lt;/p>
-&lt;h1 id="open-source-package-available-for-everyone">Open source package, available for everyone:&lt;/h1>
-&lt;h2 id="git-repository">Git repository&lt;/h2>
+&lt;h2 id="open-source-package-available-for-everyone">Open source package, available for everyone:&lt;/h2>
+&lt;h3 id="git-repository">Git repository&lt;/h3>
 &lt;p>This is the simplest one, you just need to create a public repository where you’ll be developing the package. Additionally, you can add your package to &lt;a class="link" href="https://openupm.com/" target="_blank" rel="noopener"
 >OpenUPM.com&lt;/a>, an Open Source Unity Package Registry.&lt;/p>
 &lt;p>Your users will be able to add and update your package using either a git URL or OpenUPM CLI tool.&lt;/p>
@@ -246,7 +234,7 @@ target="_blank" rel="noopener"
 &lt;li>Limited dependency resolution&lt;/li>
 &lt;li>Package needs to be public&lt;/li>
 &lt;/ul>
-&lt;h2 id="scoped-registry">Scoped Registry&lt;/h2>
+&lt;h3 id="scoped-registry">Scoped Registry&lt;/h3>
 &lt;blockquote>
 &lt;p>&lt;em>Scoped Registries allow Unity to communicate the location of any custom package registry server to the Package Manager so that the user has access to several collections of packages at the same time.&lt;/em>&lt;/p>
 &lt;/blockquote>
@@ -264,7 +252,7 @@ target="_blank" rel="noopener"
 &lt;/ul>
 &lt;p>&lt;a class="link" href="https://medium.com/@markushofer/run-your-own-unity-package-server-b4fe9995704e" target="_blank" rel="noopener"
 >Run your own Unity Package Server! | by Markus X. Hofer | Medium&lt;/a>&lt;/p>
-&lt;h2 id="tarballs">Tarballs&lt;/h2>
+&lt;h3 id="tarballs">Tarballs&lt;/h3>
 &lt;p>The tarball is also an archive file, but when imported into Unity its content is treated as immutable.&lt;/p>
 &lt;p>&lt;strong>When imported into Unity:&lt;/strong>&lt;/p>
 &lt;ul>
@@ -282,7 +270,7 @@ target="_blank" rel="noopener"
 &lt;li>Unity 2018 has no UI for importing tarballs&lt;/li>
 &lt;li>Limited dependency resolution&lt;/li>
 &lt;/ul>
-&lt;h2 id="asset-package-with-upm-package">Asset Package with UPM package&lt;/h2>
+&lt;h3 id="asset-package-with-upm-package">Asset Package with UPM package&lt;/h3>
 &lt;p>There is also a concept of an embedded UPM package. This is a package that is stored locally in the “Packages” directory. This is the case, for example, when you are developing a UPM package. What you could do is simply export the package directory as an asset package and share it this way.&lt;/p>
 &lt;p>&lt;img src="https://miro.medium.com/max/700/1*z-IaUBKVBnOM5mtGK7lfGg.png"
 loading="lazy"
@@ -299,12 +287,12 @@ This solution sadly has only one small advantage which is the package being outs
 &lt;ul>
 &lt;li>All of the cons of Asset Package&lt;/li>
 &lt;/ul>
-&lt;h1 id="closed-source-package-privateinternal-use">Closed source package, private/internal use&lt;/h1>
+&lt;h2 id="closed-source-package-privateinternal-use">Closed source package, private/internal use&lt;/h2>
 &lt;p>If you work in a company and share your internal libraries with your co-workers more setup is needed.&lt;/p>
-&lt;h2 id="simplest-option-private-repositories">Simplest option: private repositories&lt;/h2>
+&lt;h3 id="simplest-option-private-repositories">Simplest option: private repositories&lt;/h3>
 &lt;p>You can host your package in a private repository and add it to the project with a git URL. The limitation of this solution is that UPM won’t ask you for credentials to authenticate your access. The simplest solution, in this case, is to use SSH URLs. The &lt;a class="link" href="https://docs.unity3d.com/Manual/upm-errors.html#prompts-disabled" target="_blank" rel="noopener"
 >Unity manual&lt;/a> has more info regarding this problem.&lt;/p>
-&lt;h2 id="private-scoped-registry">Private Scoped Registry&lt;/h2>
+&lt;h3 id="private-scoped-registry">Private Scoped Registry&lt;/h3>
 &lt;p>This solution would be viable for companies where there are many internal packages and an administrator that can manage this setup. Unfortunately for now (2021), this solution is more of an MVP feature.&lt;/p>
 &lt;p>Pros:&lt;/p>
 &lt;ul>
@@ -317,9 +305,9 @@ This solution sadly has only one small advantage which is the package being outs
 &lt;li>Available only for Unity Editor 2019.3.4f1+&lt;/li>
 &lt;li>Requires convoluted setup for registry and each user&lt;/li>
 &lt;/ul>
-&lt;h2 id="tarballs-1">Tarballs&lt;/h2>
+&lt;h3 id="tarballs-1">Tarballs&lt;/h3>
 &lt;p>If you want to share your package with selected users but don’t want them to access your repository and set up the ssh key you can use tarballs.&lt;/p>
-&lt;h1 id="my-solution-">My Solution ✔️&lt;/h1>
+&lt;h2 id="my-solution-">My Solution ✔️&lt;/h2>
 &lt;p>I worked at a company, where I was developing a Unity SDK that enabled developers to integrate eCommerce and add ads into the 3D space of their games. Because of it, I had some limitations in what I could do. For example, I had to distribute my package to authorized users only, so it narrowed my options to closed-source ones.&lt;br>
 I also couldn’t expect my users to go over an elaborate setup process on each system just to access my package, so I had to rule out the private repository and scoped registry options.&lt;br>
 This leaved me with tarballs. Unfortunately, this option also had some big problems for my use case.&lt;/p>
