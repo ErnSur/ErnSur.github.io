@@ -9,7 +9,7 @@ draft: false
 ---
 
 ## Asset Management
-> - Asset - An object imported from project file. One project file can be imported into many assets, like a png tileset image can be imported into many sprite assets.
+> **Asset**: An object imported from project file. One project file can be imported into many assets, like a png tileset image can be imported into many sprite assets.
 
 - {{<doc AssetDatabase>}} CRUD for project assets
   - Operates on project relative paths and asset GUIDs
