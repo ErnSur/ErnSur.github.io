@@ -1,0 +1,40 @@
+:root {
+    // --link-background-color: #ffffff;
+    --link-doc-color: #b83c82;
+    --real-accent-color: #ff992f;
+    --body-text-color: #7C7C7C;
+    --card-text-color-tertiary: #666666;
+    &[data-scheme="dark"] {
+        --real-accent-color: #b77607;
+    }
+}
+
+code > a {
+    color: var(--link-doc-color);
+}
+
+.widget--toc {
+    #TableOfContents {
+        ul > li::marker {
+            content: "";
+        }
+        li.active-class > a {
+            border-left: var(--heading-border-size) solid var(--real-accent-color);
+        }
+    }
+}
+
+.article-content {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        border-width: 0px;
+    }
+    h2 {
+        border-inline-start: var(--heading-border-size) solid var(--real-accent-color);
+    }
+
+}
