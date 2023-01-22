@@ -75,7 +75,9 @@ Cons:
 
 ### Scoped Registry
 
-> _Scoped Registries allow Unity to communicate the location of any custom package registry server to the Package Manager so that the user has access to several collections of packages at the same time._
+> "Scoped Registries allow Unity to communicate the location of any custom package registry server to the Package Manager so that the user has access to several collections of packages at the same time."
+> 
+> -- [Unity Manual](https://docs.unity3d.com/Manual/upm-scoped.html)
 
 You can set up a server or use an existing one to publish your packages to. Later users may add this server as a scoped registry to their Unity Project. This allows the user to browse, install, and update every package hosted on the server with dependency resolution, as long as the dependencies are in the scope of user registries.
 

@@ -1,31 +1,31 @@
 :root {
+    // links
     --link-doc-color: rgb(184, 60, 130);
     --link-doc-color-values: 184, 60, 130;
 
+    // accents
     --real-accent-color: #cccccc;
-    --body-text-color: #7C7C7C;
-    --card-text-color-tertiary: #666666;
-    --body-background: #eaeaea;
+
+    // text
+    --body-text-color: #707070;
+    --card-text-color-tertiary: #767676;
     
+    // Background
+    // --body-background: #9aa29c;
+    // --card-background: #e2eee5;
+
+    // backquote
     --backquote-border-color: #9b61ff;
-    
     --blockquote-background-color: rgb(238, 238, 238);
-    //--card-text-color-main
-    // google text color 212121
+    
     &[data-scheme="dark"] {
         --backquote-border-color: #7d5bed;
         --real-accent-color: #686868;
-        // --accent-color: #ecf0f1;
-        // --accent-color-darker: #f9fafa;
     }
 }
 
 .article-content blockquote {
     border-color: var(--backquote-border-color);
-}
-
-.article-page .main-article .article-content {
-    //color: #212121;
 }
 
 // documentation links
@@ -46,13 +46,33 @@ code > a {
     }
 }
 
+// Table Of Contents
 .widget--toc {
     #TableOfContents {
+        li {
+            margin-left: 0px;
+            //padding-left: 0px;
+        }
         ul > li::marker {
             content: "";
         }
         li.active-class > a {
             border-left: var(--heading-border-size) solid var(--real-accent-color);
+        }
+
+        @function repeat($str, $n) {
+            $result: "";
+            @for $_ from 0 to $n {
+                $result: $result + $str;
+            }
+            @return $result;
+        }
+        @for $i from 0 to 5 {
+            & > ul #{repeat("> li > ul", $i)} > li.active-class > a {
+                $n: 5 + $i * 15;
+                margin-left: calc(-#{$n}px - 1em);
+                padding-left: calc(#{$n}px + 1em - var(--heading-border-size));
+            }
         }
     }
 }
