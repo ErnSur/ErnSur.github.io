@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Unity on Ernest Suryś</title><link>https://ErnSur.github.io/categories/unity/</link><description>Recent content in Unity on Ernest Suryś</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 16 Jul 2022 20:47:30 +0200</lastBuildDate><atom:link href="https://ErnSur.github.io/categories/unity/index.xml" rel="self" type="application/rss+xml"/><item><title>Unity Editor Scripting Cheat Sheet</title><link>https://ErnSur.github.io/p/unity-editor-scripting-cheat-sheet/</link><pubDate>Sat, 16 Jul 2022 20:47:30 +0200</pubDate><guid>https://ErnSur.github.io/p/unity-editor-scripting-cheat-sheet/</guid><description>&lt;img src="https://ErnSur.github.io/p/unity-editor-scripting-cheat-sheet/header.png" alt="Featured image of post Unity Editor Scripting Cheat Sheet" />&lt;h2 id="asset-management">Asset Management&lt;/h2>
 &lt;blockquote>
-&lt;ul>
-&lt;li>Asset - An object imported from project file. One project file can be imported into many assets, like a png tileset image can be imported into many sprite assets.&lt;/li>
-&lt;/ul>
+&lt;p>&lt;strong>Asset&lt;/strong>: An object imported from project file. One project file can be imported into many assets, like a png tileset image can be imported into many sprite assets.&lt;/p>
 &lt;/blockquote>
 &lt;ul>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/AssetDatabase.html" target="_blank" rel="noopener">AssetDatabase&lt;/a>&lt;/code> CRUD for project assets
