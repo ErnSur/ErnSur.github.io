@@ -42,12 +42,20 @@ draft: false
 - {{<doc ObjectPreview>}} Create a custom preview for specific component or scriptable object
 - {{<doc EditorTools.EditorTool>}} Custom tools are like the built-in Move, Rotate, Scale tools or component specific tools like colider bounds editor
 - {{<doc EditorWindow>}} Create custom windows
+- {{<doc PopupWindow>}} & {{<doc PopupWindowContent>}} Create a popup window
+- {{<doc ScriptableWizard>}} Editor window designed for quick object creation tools
 - {{<doc SettingsProvider>}} Create custom view in Preferences or ProjectSettings windows
 - {{<doc PropertyDrawer>}} Customize input field for your serializable c# type
 - {{<doc EditorApplication-contextualPropertyMenu>}} Callback raised whenever the user contex-clicks on a property in an Inspector
 - {{<doc EditorApplication-projectWindowItemOnGUI>}} Customize project window items
 - {{<doc EditorApplication-hierarchyWindowItemOnGUI>}} Customize hierarchy window items
 - {{<doc Editor-finishedDefaultHeaderGUI>}} Add UI to the default header drawer in Inspector Window
+- `UnityEditor.SceneManagement.SceneHierarchyHooks` Add menu items to Hierarchy window
+  - `addItemsToCreateMenu`
+  - `addItemsToGameObjectContextMenu`
+  - `addItemsToSceneHeaderContextMenu`
+  - `addItemsToSubSceneHeaderContextMenu`
+
 
 ### UI Systems
 - {{<manual `UI Toolkit` UIElements>}}
