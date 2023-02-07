@@ -33,29 +33,37 @@ draft: false
 ## UI
 
 ### Entry points
+
+#### Menu Items
 - {{<doc MenuItem>}} Create context menu items
 - {{<doc ContextMenu>}} Create object specific context menu items
 - {{<doc ContextMenuItemAttribute>}} Create property specific context menu items
 - {{<doc IHasCustomMenu>}} Defines a method to add custom menu items to an Editor Window
-- {{<doc Editor>}} Create a custom "Inspector view" for the specific component or scriptable object
-- {{<doc AssetImporters.AssetImporterEditor>}} Create a custom editor for the {{<doc AssetImporters.ScriptedImporter>}}
-- {{<doc ObjectPreview>}} Create a custom preview for specific component or scriptable object
-- {{<doc EditorTools.EditorTool>}} Custom tools are like the built-in Move, Rotate, Scale tools or component specific tools like colider bounds editor
-- {{<doc EditorWindow>}} Create custom windows
-- {{<doc PopupWindow>}} & {{<doc PopupWindowContent>}} Create a popup window
-- {{<doc ScriptableWizard>}} Editor window designed for quick object creation tools
-- {{<doc SettingsProvider>}} Create custom view in Preferences or ProjectSettings windows
-- {{<doc PropertyDrawer>}} Customize input field for your serializable c# type
 - {{<doc EditorApplication-contextualPropertyMenu>}} Callback raised whenever the user contex-clicks on a property in an Inspector
-- {{<doc EditorApplication-projectWindowItemOnGUI>}} Customize project window items
-- {{<doc EditorApplication-hierarchyWindowItemOnGUI>}} Customize hierarchy window items
-- {{<doc Editor-finishedDefaultHeaderGUI>}} Add UI to the default header drawer in Inspector Window
 - `UnityEditor.SceneManagement.SceneHierarchyHooks` Add menu items to Hierarchy window
   - `addItemsToCreateMenu`
   - `addItemsToGameObjectContextMenu`
   - `addItemsToSceneHeaderContextMenu`
   - `addItemsToSubSceneHeaderContextMenu`
 
+#### Editors
+- {{<doc Editor>}} Create a custom "Inspector view" for the specific component or scriptable object
+- {{<doc AssetImporters.AssetImporterEditor>}} Create a custom editor for the {{<doc AssetImporters.ScriptedImporter>}}
+- {{<doc ObjectPreview>}} Create a custom preview for specific component or scriptable object
+- {{<doc PropertyDrawer>}} Customize input field for your serializable c# type
+
+#### Windows
+- {{<doc EditorWindow>}} Create custom windows
+- {{<doc PopupWindow>}} & {{<doc PopupWindowContent>}} Create a popup window
+- {{<doc ScriptableWizard>}} Editor window designed for quick object creation tools
+- {{<doc SettingsProvider>}} Create custom view in Preferences or ProjectSettings windows
+
+#### Addons
+- {{<doc Overlays.Overlay>}} Customizable panels and toolbars
+- {{<doc EditorTools.EditorTool>}} Custom tools are like the built-in Move, Rotate, Scale tools or component specific tools like colider bounds editor
+- {{<doc EditorApplication-projectWindowItemOnGUI>}} Customize project window items
+- {{<doc EditorApplication-hierarchyWindowItemOnGUI>}} Customize hierarchy window items
+- {{<doc Editor-finishedDefaultHeaderGUI>}} Add UI to the default header drawer in Inspector Window
 
 ### UI Systems
 - {{<manual `UI Toolkit` UIElements>}}
@@ -63,16 +71,19 @@ draft: false
 - {{<manual `IMGUI (Legacy)` GUIScriptingGuide>}}
   - Static classes: {{<doc GUI>}}, {{<doc GUILayout>}}, {{<doc EditorGUI>}}, {{<doc EditorGUILayout>}}
 
-### Utility
-- {{<doc EditorGUIUtility-isProSkin>}} is user using a dark or light editor theme
-
-## Scene View
+### Scene View UI
 
 - {{<doc Gizmos>}} Draw things like tool handles or bounding boxes
 - {{<doc DrawGizmo>}} Supply a gizmo renderer for any component
 - {{<doc Handles>}} Custom 3D GUI controls and drawing in the Scene view
 - {{<doc HandleUtility>}} Helper functions for Scene View style 3D GUI
 - {{<doc Overlays.Overlay>}} Customizable panels and toolbars
+  - {{<doc Overlays.ToolbarOverlay>}} 
+  - {{<doc Overlays.ITransientOverlay>}}
+### Utility
+- {{<doc EditorGUIUtility-isProSkin>}} is user using a dark or light editor theme
+
+
 
 ## Serialization
 
