@@ -34,19 +34,40 @@
 &lt;/ul>
 &lt;h2 id="ui">UI&lt;/h2>
 &lt;h3 id="entry-points-1">Entry points&lt;/h3>
+&lt;h4 id="menu-items">Menu Items&lt;/h4>
 &lt;ul>
-&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/MenuItem.html" target="_blank" rel="noopener">MenuItem&lt;/a>&lt;/code> Create context menu items&lt;/li>
-&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/ContextMenu.html" target="_blank" rel="noopener">ContextMenu&lt;/a>&lt;/code> Create object specific context menu items&lt;/li>
-&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/ContextMenuItemAttribute.html" target="_blank" rel="noopener">ContextMenuItemAttribute&lt;/a>&lt;/code> Create property specific context menu items&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/MenuItem.html" target="_blank" rel="noopener">MenuItem&lt;/a>&lt;/code> Create a menu item&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/ContextMenu.html" target="_blank" rel="noopener">ContextMenu&lt;/a>&lt;/code> Create object specific context menu items. Works on &lt;code>MonoBehaviour&lt;/code> and &lt;code>ScriptableObject&lt;/code> classes. Right click on object inspector header to show menu&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/ContextMenuItemAttribute.html" target="_blank" rel="noopener">ContextMenuItemAttribute&lt;/a>&lt;/code> Same as above but works on serialized fields&lt;/li>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/IHasCustomMenu.html" target="_blank" rel="noopener">IHasCustomMenu&lt;/a>&lt;/code> Defines a method to add custom menu items to an Editor Window&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorApplication-contextualPropertyMenu.html" target="_blank" rel="noopener">EditorApplication.contextualPropertyMenu&lt;/a>&lt;/code> Callback raised whenever the user contex-clicks on a property in an Inspector&lt;/li>
+&lt;li>&lt;code>UnityEditor.SceneManagement.SceneHierarchyHooks&lt;/code> Add menu items to Hierarchy window
+&lt;ul>
+&lt;li>&lt;code>addItemsToCreateMenu&lt;/code>&lt;/li>
+&lt;li>&lt;code>addItemsToGameObjectContextMenu&lt;/code>&lt;/li>
+&lt;li>&lt;code>addItemsToSceneHeaderContextMenu&lt;/code>&lt;/li>
+&lt;li>&lt;code>addItemsToSubSceneHeaderContextMenu&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="editors">Editors&lt;/h4>
+&lt;ul>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/Editor.html" target="_blank" rel="noopener">Editor&lt;/a>&lt;/code> Create a custom &amp;ldquo;Inspector view&amp;rdquo; for the specific component or scriptable object&lt;/li>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/AssetImporters.AssetImporterEditor.html" target="_blank" rel="noopener">AssetImporters.AssetImporterEditor&lt;/a>&lt;/code> Create a custom editor for the &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/AssetImporters.ScriptedImporter.html" target="_blank" rel="noopener">AssetImporters.ScriptedImporter&lt;/a>&lt;/code>&lt;/li>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/ObjectPreview.html" target="_blank" rel="noopener">ObjectPreview&lt;/a>&lt;/code> Create a custom preview for specific component or scriptable object&lt;/li>
-&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorTools.EditorTool.html" target="_blank" rel="noopener">EditorTools.EditorTool&lt;/a>&lt;/code> Custom tools are like the built-in Move, Rotate, Scale tools or component specific tools like colider bounds editor&lt;/li>
-&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorWindow.html" target="_blank" rel="noopener">EditorWindow&lt;/a>&lt;/code> Create custom windows&lt;/li>
-&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/SettingsProvider.html" target="_blank" rel="noopener">SettingsProvider&lt;/a>&lt;/code> Create custom view in Preferences or ProjectSettings windows&lt;/li>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/PropertyDrawer.html" target="_blank" rel="noopener">PropertyDrawer&lt;/a>&lt;/code> Customize input field for your serializable c# type&lt;/li>
-&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorApplication-contextualPropertyMenu.html" target="_blank" rel="noopener">EditorApplication.contextualPropertyMenu&lt;/a>&lt;/code> Callback raised whenever the user contex-clicks on a property in an Inspector&lt;/li>
+&lt;/ul>
+&lt;h4 id="windows">Windows&lt;/h4>
+&lt;ul>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorWindow.html" target="_blank" rel="noopener">EditorWindow&lt;/a>&lt;/code> Create custom windows&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/PopupWindow.html" target="_blank" rel="noopener">PopupWindow&lt;/a>&lt;/code> &amp;amp; &lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/PopupWindowContent.html" target="_blank" rel="noopener">PopupWindowContent&lt;/a>&lt;/code> Create a popup window&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/ScriptableWizard.html" target="_blank" rel="noopener">ScriptableWizard&lt;/a>&lt;/code> Editor window designed for quick object creation tools&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/SettingsProvider.html" target="_blank" rel="noopener">SettingsProvider&lt;/a>&lt;/code> Create custom view in Preferences or ProjectSettings windows&lt;/li>
+&lt;/ul>
+&lt;h4 id="addons">Addons&lt;/h4>
+&lt;ul>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/Overlays.Overlay.html" target="_blank" rel="noopener">Overlays.Overlay&lt;/a>&lt;/code> Customizable panels and toolbars&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorTools.EditorTool.html" target="_blank" rel="noopener">EditorTools.EditorTool&lt;/a>&lt;/code> Custom tools are like the built-in Move, Rotate, Scale tools or component specific tools like colider bounds editor&lt;/li>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorApplication-projectWindowItemOnGUI.html" target="_blank" rel="noopener">EditorApplication.projectWindowItemOnGUI&lt;/a>&lt;/code> Customize project window items&lt;/li>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorApplication-hierarchyWindowItemOnGUI.html" target="_blank" rel="noopener">EditorApplication.hierarchyWindowItemOnGUI&lt;/a>&lt;/code> Customize hierarchy window items&lt;/li>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/Editor-finishedDefaultHeaderGUI.html" target="_blank" rel="noopener">Editor.finishedDefaultHeaderGUI&lt;/a>&lt;/code> Add UI to the default header drawer in Inspector Window&lt;/li>
@@ -64,17 +85,22 @@
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;h3 id="utility">Utility&lt;/h3>
-&lt;ul>
-&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorGUIUtility-isProSkin.html" target="_blank" rel="noopener">EditorGUIUtility.isProSkin&lt;/a>&lt;/code> is user using a dark or light editor theme&lt;/li>
-&lt;/ul>
-&lt;h2 id="scene-view">Scene View&lt;/h2>
+&lt;h3 id="scene-view-ui">Scene View UI&lt;/h3>
 &lt;ul>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/Gizmos.html" target="_blank" rel="noopener">Gizmos&lt;/a>&lt;/code> Draw things like tool handles or bounding boxes&lt;/li>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/DrawGizmo.html" target="_blank" rel="noopener">DrawGizmo&lt;/a>&lt;/code> Supply a gizmo renderer for any component&lt;/li>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/Handles.html" target="_blank" rel="noopener">Handles&lt;/a>&lt;/code> Custom 3D GUI controls and drawing in the Scene view&lt;/li>
 &lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/HandleUtility.html" target="_blank" rel="noopener">HandleUtility&lt;/a>&lt;/code> Helper functions for Scene View style 3D GUI&lt;/li>
-&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/Overlays.Overlay.html" target="_blank" rel="noopener">Overlays.Overlay&lt;/a>&lt;/code> Customizable panels and toolbars&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/Overlays.Overlay.html" target="_blank" rel="noopener">Overlays.Overlay&lt;/a>&lt;/code> Customizable panels and toolbars
+&lt;ul>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/Overlays.ToolbarOverlay.html" target="_blank" rel="noopener">Overlays.ToolbarOverlay&lt;/a>&lt;/code>&lt;/li>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/Overlays.ITransientOverlay.html" target="_blank" rel="noopener">Overlays.ITransientOverlay&lt;/a>&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="utility">Utility&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>&lt;a class="link" href="https://docs.unity3d.com/ScriptReference/EditorGUIUtility-isProSkin.html" target="_blank" rel="noopener">EditorGUIUtility.isProSkin&lt;/a>&lt;/code> is user using a dark or light editor theme&lt;/li>
 &lt;/ul>
 &lt;h2 id="serialization">Serialization&lt;/h2>
 &lt;ul>
@@ -111,21 +137,44 @@
 &lt;/ul>
 &lt;h2 id="icons">Icons&lt;/h2>
 &lt;blockquote>
-&lt;p>Functions that load or set editor icons will find the appropriate texture for the active editor theme if certain conditions are met&lt;/p>
+&lt;p>Certain functions that load or set editor icons will find the appropriate texture for the active editor theme if certain conditions are met&lt;/p>
 &lt;ul>
 &lt;li>Icon textures for light and dark themes are in the same directory&lt;/li>
-&lt;li>Icons for the dark theme are indicated by the prefix: &amp;ldquo;d_&amp;rdquo;&lt;/li>
-&lt;li>The icon name or path passed to the function argument was pointing to the light version of the texture&lt;/li>
+&lt;li>Dark theme icon name starts with the prefix: &amp;ldquo;d_&amp;rdquo;&lt;/li>
+&lt;li>The icon name, path or texture passed to the function was pointing to the light version of the image&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>Example&lt;/strong>:&lt;br>
-Given that these files exist:&lt;/p>
-&lt;ul>
-&lt;li>&lt;em>Icons/ScriptIcon.png&lt;/em>&lt;/li>
-&lt;li>&lt;em>Icons/d_ScriptIcon.png&lt;/em>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;code>monoImporter.SetIcon(AssetDatabase.LoadAssetAtPath&amp;lt;Texture2D&amp;gt;(&amp;quot;Icons/ScriptIcon.png&amp;quot;));&lt;/code>&lt;br>
-In the above example editor shows different mono importer icons depending on the active editor theme.&lt;/p>
-&lt;/blockquote>
+&lt;p>&lt;strong>Example&lt;/strong>:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c#" data-lang="c#">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Assuming the editor theme is set to dark&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// and there are two icons located at Assets/myIcon.png and Assets/d_myIcon.png&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// This will return the Assets/d_myIcon.png because Editor theme is set to dark&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">var&lt;/span> &lt;span class="n">darkIcon&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">EditorGUIUtility&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">IconContent&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Assets/myIcon.png&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="n">image&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// This will return the Assets/myIcon.png because AssetDatabase.LoadAssetAtPath always returns the exact asset&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">var&lt;/span> &lt;span class="n">icon&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">AssetDatabase&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">LoadAssetAtPath&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="n">Texture2D&lt;/span>&lt;span class="p">&amp;gt;(&lt;/span>&lt;span class="s">&amp;#34;Assets/myIcon.png&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">var&lt;/span> &lt;span class="n">monoImporter&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">MonoImporter&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="n">AssetImporter&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">GetAtPath&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Assets/SomeScript.cs&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// This will set the icon to Assets/d_myIcon.png because Editor theme is set to dark&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">monoImporter&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">SetIcon&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">icon&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/blockquote>
 &lt;ul>
 &lt;li>&lt;a class="link" href="https://www.foundations.unity.com/fundamentals/iconography" target="_blank" rel="noopener"
 >Iconography&lt;/a>&lt;/li>
