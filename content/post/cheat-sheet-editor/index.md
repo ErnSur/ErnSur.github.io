@@ -35,9 +35,9 @@ draft: false
 ### Entry points
 
 #### Menu Items
-- {{<doc MenuItem>}} Create context menu items
-- {{<doc ContextMenu>}} Create object specific context menu items
-- {{<doc ContextMenuItemAttribute>}} Create property specific context menu items
+- {{<doc MenuItem>}} Create a menu item
+- {{<doc ContextMenu>}} Create object specific context menu items. Works on `MonoBehaviour` and `ScriptableObject` classes. Right click on object inspector header to show menu
+- {{<doc ContextMenuItemAttribute>}} Same as above but works on serialized fields
 - {{<doc IHasCustomMenu>}} Defines a method to add custom menu items to an Editor Window
 - {{<doc EditorApplication-contextualPropertyMenu>}} Callback raised whenever the user contex-clicks on a property in an Inspector
 - `UnityEditor.SceneManagement.SceneHierarchyHooks` Add menu items to Hierarchy window
@@ -80,9 +80,9 @@ draft: false
 - {{<doc Overlays.Overlay>}} Customizable panels and toolbars
   - {{<doc Overlays.ToolbarOverlay>}} 
   - {{<doc Overlays.ITransientOverlay>}}
+
 ### Utility
 - {{<doc EditorGUIUtility-isProSkin>}} is user using a dark or light editor theme
-
 
 
 ## Serialization
@@ -95,6 +95,7 @@ draft: false
 - {{<doc MonoBehaviour.OnValidate>}} & {{<doc ScriptableObject.OnValidate>}} calls when a value changes in the Inspector
 - {{<doc EditorPrefs>}} Save and load data. **Warning**: Editor prefs are shared between all unity projects on user mashine. For project/tool/sdk editor only settings use {{<doc ScriptableSingleton_1>}} or {{<doc ScriptableObject>}} instead.
 - {{<doc ScriptableSingleton_1>}} In classes that derive from ScriptableSingleton, serializable data you add survives assembly reloading in the Editor. Also, if the class uses the FilePathAttribute, the serializable data persists between sessions of Unity.
+
 ## Native Popups
 
 - {{<doc EditorUtility.DisplayDialog>}} Get confirmation from the user
@@ -113,18 +114,26 @@ draft: false
 
 ## Icons
 
-> Functions that load or set editor icons will find the appropriate texture for the active editor theme if certain conditions are met  
+> Certain functions that load or set editor icons will find the appropriate texture for the active editor theme if certain conditions are met
 > - Icon textures for light and dark themes are in the same directory
-> - Icons for the dark theme are indicated by the prefix: "d_"
-> - The icon name or path passed to the function argument was pointing to the light version of the texture
+> - Dark theme icon name starts with the prefix: "d_"
+> - The icon name, path or texture passed to the function was pointing to the light version of the image
 >   
-> **Example**:  
-> Given that these files exist:  
-> - _Icons/ScriptIcon.png_
-> - _Icons/d_ScriptIcon.png_
+> **Example**:
+> ```c#
+> // Assuming the editor theme is set to dark
+> // and there are two icons located at Assets/myIcon.png and Assets/d_myIcon.png
 > 
-> `monoImporter.SetIcon(AssetDatabase.LoadAssetAtPath<Texture2D>("Icons/ScriptIcon.png"));`  
-> In the above example editor shows different mono importer icons depending on the active editor theme.
+> // This will return the Assets/d_myIcon.png because Editor theme is set to dark
+> var darkIcon = EditorGUIUtility.IconContent("Assets/myIcon.png").image;
+> 
+> // This will return the Assets/myIcon.png because AssetDatabase.LoadAssetAtPath always returns the exact asset
+> var icon = AssetDatabase.LoadAssetAtPath<Texture2D>("Assets/myIcon.png");
+> 
+> var monoImporter = (MonoImporter)AssetImporter.GetAtPath("Assets/SomeScript.cs");
+> // This will set the icon to Assets/d_myIcon.png because Editor theme is set to dark
+> monoImporter.SetIcon(icon);
+> ```
 
 - [Iconography](https://www.foundations.unity.com/fundamentals/iconography)
 - {{<doc EditorGUIUtility.IconContent>}} Load icon texture from editor resources. Find icons in [Editor Icon Browser](https://github.com/ErnSur/unity-editor-icons)
